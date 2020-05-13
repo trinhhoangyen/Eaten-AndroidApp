@@ -20,7 +20,7 @@ namespace EatenAPI.WEB.Controllers
         }
 
         [HttpPost("get-by-id")]
-        public IActionResult getTheLoaiById([FromBody]SimpleReq req)
+        public IActionResult getFoodCategoryById([FromBody]SimpleReq req)
         {
             var res = new SingleRsp();
             res = _svc.Read(req.Id);
@@ -28,7 +28,7 @@ namespace EatenAPI.WEB.Controllers
         }
 
         [HttpPost("get-all")]
-        public IActionResult getAllCategory()
+        public IActionResult getAllFoodCategory()
         {
             var res = new SingleRsp();
             res.Data = _svc.All;

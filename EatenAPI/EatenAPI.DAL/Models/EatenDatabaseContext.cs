@@ -69,7 +69,7 @@ namespace EatenAPI.DAL.Models
 
                 entity.Property(e => e.AccountId).HasColumnName("AccountID");
 
-                entity.Property(e => e.CamXuc).HasDefaultValueSql("((0))");
+                entity.Property(e => e.React).HasDefaultValueSql("((0))");
 
                 entity.Property(e => e.Content).HasColumnType("ntext");
 

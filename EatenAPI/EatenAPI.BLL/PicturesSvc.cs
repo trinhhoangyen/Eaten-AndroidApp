@@ -7,10 +7,11 @@ using System.Text;
 
 namespace EatenAPI.BLL
 {
+
     using Common.Req;
     using Common.Rsp;
     using System.Linq;
-    public class FoodCategoriesSvc : GenericSvc<FoodCategoriesRep, FoodCategories>
+    public class PicturesSvc : GenericSvc<PicturesRep, Pictures>
     {
         public override SingleRsp Read(int id)
         {
@@ -22,10 +23,10 @@ namespace EatenAPI.BLL
             return res;
         }
 
-        public override SingleRsp Update(FoodCategories m)
+        public override SingleRsp Update(Pictures m)
         {
             var res = new SingleRsp();
-            var m1 = m.CategoryId > 0 ? _rep.Read(m.CategoryId) : _rep.Read(m.CategoryName);
+            var m1 = m.PictureId > 0 ? _rep.Read(m.PictureId) : _rep.Read((int)m.PostId);
             if (m1 == null)
                 res.SetError("EZ103", "No Data.");
             else
@@ -36,35 +37,37 @@ namespace EatenAPI.BLL
             return res;
         }
 
-        public SingleRsp CreateFoodCategory(FoodCategoryReq cate)
+        public SingleRsp CreatePicture(PictureReq pic)
         {
             var res = new SingleRsp();
-            var cateNew = new FoodCategories()
+            var picNew = new Pictures()
             {
-                CategoryId = cate.CategoryId,
-                CategoryName = cate.CategoryName
+                PictureId = pic.PictureId,
+                PostId = pic.PostId,
+                Picture = pic.Picture
             };
-            res = _rep.CreateFoodCategory(cateNew);
+            res = _rep.CreatePicture(picNew);
             return res;
         }
 
-        public SingleRsp UpdateFoodCategory(FoodCategoryReq cate)
+        public SingleRsp UpdatePicture(PictureReq pic)
         {
             var res = new SingleRsp();
-            var cateUpdate = new FoodCategories()
+            var picUpdate = new Pictures()
             {
-                CategoryId = cate.CategoryId,
-                CategoryName = cate.CategoryName
+                PictureId = pic.PictureId,
+                PostId = pic.PostId,
+                Picture = pic.Picture
             };
-            res = _rep.UpdateFoodCategory(cateUpdate);
+            res = _rep.UpdatePicture(picUpdate);
             return res;
         }
 
-        public SingleRsp DeleteFoodCategory(int id)
+        public SingleRsp DeletePicture(int id)
         {
             var res = new SingleRsp();
-            var cate = _rep.All.First(p => p.CategoryId == id);
-            res = _rep.DeleteFoodCategory(cate);
+            var acc = _rep.All.First(p => p.PictureId == id);
+            res = _rep.DeletePicture(acc);
             return res;
         }
     }

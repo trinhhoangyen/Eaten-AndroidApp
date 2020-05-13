@@ -45,8 +45,8 @@ CREATE TABLE Comments
 	PostID int,
 	AccountID int,
 	Content ntext,
-	CamXuc int default 0,	--- 0 và 1
-	DanhGia int, --- 1 tới 5
+	React int default 0,	--- 0 và 1
+	Rate int, --- 1 tới 5
 
 	primary key(CommentID, PostID, AccountID),
 	foreign key (PostID) references Posts (PostID),
