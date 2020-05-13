@@ -1,0 +1,4 @@
+Install-Package Microsoft.EntityFrameworkCore
+Install-Package Microsoft.EntityFrameworkCore.SqlServer
+Install-Package Microsoft.EntityFrameworkCore.Tools
+Scaffold-DbContext "Data Source=.\THYEN;Initial Catalog=EatenDatabase;Persist Security Info=True;User ID=sa;Password=221199;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Force

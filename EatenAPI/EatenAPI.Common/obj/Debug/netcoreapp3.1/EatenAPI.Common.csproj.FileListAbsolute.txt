@@ -1,0 +1,12 @@
+D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\bin\Debug\netcoreapp3.1\EatenAPI.Common.deps.json
+D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\bin\Debug\netcoreapp3.1\EatenAPI.Common.dll
+D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.AssemblyInfoInputs.cache
+D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.AssemblyInfo.cs
+D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\bin\Debug\netcoreapp3.1\EatenAPI.Common.runtimeconfig.json
+D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\bin\Debug\netcoreapp3.1\EatenAPI.Common.runtimeconfig.dev.json
+D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\bin\Debug\netcoreapp3.1\EatenAPI.Common.pdb
+D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.csproj.CoreCompileInputs.cache
+D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.dll
+D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.pdb
+D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.genruntimeconfig.cache
+D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.csprojAssemblyReference.cache
