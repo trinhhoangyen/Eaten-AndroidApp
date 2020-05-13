@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
-namespace EatenAPI.DAL.Models
+namespace EatenAPI.Common.Req
 {
-    public partial class Comments
+    public class CommentReq
     {
         public int CommentId { get; set; }
         public int PostId { get; set; }
@@ -11,8 +12,5 @@ namespace EatenAPI.DAL.Models
         public string Content { get; set; }
         public int? React { get; set; }
         public int? Rate { get; set; }
-
-        public virtual Accounts Account { get; set; }
-        public virtual Posts Post { get; set; }
     }
 }

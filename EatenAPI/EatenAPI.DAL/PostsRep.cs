@@ -8,23 +8,23 @@ namespace EatenAPI.DAL
 {
     using Common.Rsp;
     using System.Linq;
-    public class FoodCategoriesRep : GenericRep<EatenDatabaseContext, FoodCategories>
+    public class PostsRep : GenericRep<EatenDatabaseContext, Posts>
     {
         #region --Override--
-        public override FoodCategories Read(int id)
+        public override Posts Read(int id)
         {
-            var res = All.FirstOrDefault(p => p.CategoryId == id);
+            var res = All.FirstOrDefault(p => p.PostId == id);
             return res;
         }
 
         public int Remove(int id)
         {
-            var m = All.First(i => i.CategoryId == id);
+            var m = All.First(i => i.PostId == id);
             m = base.Delete(m);
-            return m.CategoryId;
+            return m.PostId;
         }
 
-        public SingleRsp CreateFoodCategory(FoodCategories theLoai)
+        public SingleRsp CreatePost(Posts post)
         {
             var res = new SingleRsp();
             using (var context = new EatenDatabaseContext())
@@ -33,7 +33,7 @@ namespace EatenAPI.DAL
                 {
                     try
                     {
-                        var t = context.FoodCategories.Add(theLoai);
+                        var t = context.Posts.Add(post);
                         context.SaveChanges();
                         tran.Commit();
                     }
@@ -47,7 +47,7 @@ namespace EatenAPI.DAL
             return res;
         }
 
-        public SingleRsp UpdateFoodCategory(FoodCategories theLoai)
+        public SingleRsp UpdatePost(Posts post)
         {
             var res = new SingleRsp();
             using (var context = new EatenDatabaseContext())
@@ -56,7 +56,7 @@ namespace EatenAPI.DAL
                 {
                     try
                     {
-                        var t = context.FoodCategories.Update(theLoai);
+                        var t = context.Posts.Update(post);
                         context.SaveChanges();
                         tran.Commit();
                     }
@@ -70,7 +70,7 @@ namespace EatenAPI.DAL
             return res;
         }
 
-        public SingleRsp DeleteFoodCategory(FoodCategories theLoai)
+        public SingleRsp DeletePost(Posts post)
         {
             var res = new SingleRsp();
             using (var context = new EatenDatabaseContext())
@@ -79,7 +79,7 @@ namespace EatenAPI.DAL
                 {
                     try
                     {
-                        var t = context.FoodCategories.Remove(theLoai);
+                        var t = context.Posts.Remove(post);
                         context.SaveChanges();
                         tran.Commit();
                     }

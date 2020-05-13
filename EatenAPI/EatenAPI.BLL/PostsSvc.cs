@@ -7,10 +7,11 @@ using System.Text;
 
 namespace EatenAPI.BLL
 {
+
     using Common.Req;
     using Common.Rsp;
     using System.Linq;
-    public class FoodCategoriesSvc : GenericSvc<FoodCategoriesRep, FoodCategories>
+    public class PostsSvc : GenericSvc<PostsRep, Posts>
     {
         public override SingleRsp Read(int id)
         {
@@ -22,10 +23,10 @@ namespace EatenAPI.BLL
             return res;
         }
 
-        public override SingleRsp Update(FoodCategories m)
+        public override SingleRsp Update(Posts m)
         {
             var res = new SingleRsp();
-            var m1 = m.CategoryId > 0 ? _rep.Read(m.CategoryId) : _rep.Read(m.CategoryName);
+            var m1 = m.PostId > 0 ? _rep.Read(m.PostId) : _rep.Read(m.PostName);
             if (m1 == null)
                 res.SetError("EZ103", "No Data.");
             else
@@ -36,35 +37,41 @@ namespace EatenAPI.BLL
             return res;
         }
 
-        public SingleRsp CreateFoodCategory(FoodCategoryReq cate)
+        public SingleRsp CreatePost(PostReq post)
         {
             var res = new SingleRsp();
-            var cateNew = new FoodCategories()
+            var postNew = new Posts()
             {
-                CategoryId = cate.CategoryId,
-                CategoryName = cate.CategoryName
+                PostId = post.PostId,
+                AccountId = post.AccountId,
+                PostName = post.PostName,
+                Content = post.Content,
+                Address = post.Address
             };
-            res = _rep.CreateFoodCategory(cateNew);
+            res = _rep.CreatePost(postNew);
             return res;
         }
 
-        public SingleRsp UpdateFoodCategory(FoodCategoryReq cate)
+        public SingleRsp UpdatePost(PostReq post)
         {
             var res = new SingleRsp();
-            var cateUpdate = new FoodCategories()
+            var postUpdate = new Posts()
             {
-                CategoryId = cate.CategoryId,
-                CategoryName = cate.CategoryName
+                PostId = post.PostId,
+                AccountId = post.AccountId,
+                PostName = post.PostName,
+                Content = post.Content,
+                Address = post.Address
             };
-            res = _rep.UpdateFoodCategory(cateUpdate);
+            res = _rep.UpdatePost(postUpdate);
             return res;
         }
 
-        public SingleRsp DeleteFoodCategory(int id)
+        public SingleRsp DeletePost(int id)
         {
             var res = new SingleRsp();
-            var cate = _rep.All.First(p => p.CategoryId == id);
-            res = _rep.DeleteFoodCategory(cate);
+            var acc = _rep.All.First(p => p.PostId == id);
+            res = _rep.DeletePost(acc);
             return res;
         }
     }
