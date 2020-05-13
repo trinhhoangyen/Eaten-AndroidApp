@@ -1,9 +1,9 @@
-# LTDD_TH71_k17
- Eaten
- 
- Người thực hiện: Nguyễn Thanh Tú
-                  Trịnh Hoàng Yến
-                  Nguyễn Hoàng Huy
-                  Lưu Hoàng Minh
+# Project Android
+<h1>Eaten</h1>
+<p>Người thực hiện: </p>
+        <p>Nguyễn Thanh Tú </p>
+        <p>Trịnh Hoàng Yến </p>
+        <p>Nguyễn Hoàng Huy </p>
+        <p>Lưu Hoàng Minh </p>
                   
 
