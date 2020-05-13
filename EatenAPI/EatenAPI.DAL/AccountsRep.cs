@@ -16,6 +16,7 @@ namespace EatenAPI.DAL
             var res = All.FirstOrDefault(p => p.AccountId == id);
             return res;
         }
+        #endregion
 
         public int Remove(int id)
         {
@@ -92,6 +93,5 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-        #endregion
     }
 }

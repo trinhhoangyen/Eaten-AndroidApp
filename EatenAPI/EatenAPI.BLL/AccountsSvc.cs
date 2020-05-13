@@ -42,7 +42,6 @@ namespace EatenAPI.BLL
             var res = new SingleRsp();
             var accNew = new Accounts()
             {
-                AccountId = acc.AccountId,
                 Email = acc.Email,
                 Password = acc.Password,
                 DisplayName = acc.DisplayName,

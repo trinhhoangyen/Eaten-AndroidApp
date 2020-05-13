@@ -42,7 +42,6 @@ namespace EatenAPI.BLL
             var res = new SingleRsp();
             var cmtNew = new Comments()
             {
-                CommentId = cmt.CommentId,
                 PostId = cmt.PostId,
                 AccountId = cmt.AccountId,
                 Content = cmt.Content,

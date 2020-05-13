@@ -42,7 +42,6 @@ namespace EatenAPI.BLL
             var res = new SingleRsp();
             var postNew = new Posts()
             {
-                PostId = post.PostId,
                 AccountId = post.AccountId,
                 PostName = post.PostName,
                 Content = post.Content,

@@ -42,7 +42,6 @@ namespace EatenAPI.BLL
             var res = new SingleRsp();
             var picNew = new Pictures()
             {
-                PictureId = pic.PictureId,
                 PostId = pic.PostId,
                 Picture = pic.Picture
             };

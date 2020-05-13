@@ -53,7 +53,6 @@ namespace EatenAPI.BLL
             var res = new SingleRsp();
             var cateUpdate = new FoodCategories()
             {
-                CategoryId = cate.CategoryId,
                 CategoryName = cate.CategoryName
             };
             res = _rep.UpdateFoodCategory(cateUpdate);

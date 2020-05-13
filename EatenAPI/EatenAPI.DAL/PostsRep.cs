@@ -16,7 +16,7 @@ namespace EatenAPI.DAL
             var res = All.FirstOrDefault(p => p.PostId == id);
             return res;
         }
-
+        #endregion
         public int Remove(int id)
         {
             var m = All.First(i => i.PostId == id);
@@ -92,6 +92,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-        #endregion
+        
     }
 }
