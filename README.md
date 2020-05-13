@@ -1,4 +1,4 @@
-# LTDD_TH71_k17
+# Project Android
 <h1>Eaten</h1>
 <p>Người thực hiện: </p>
         <p>Nguyễn Thanh Tú </p>
