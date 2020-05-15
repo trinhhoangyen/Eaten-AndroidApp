@@ -16,6 +16,12 @@ namespace EatenAPI.DAL
             var res = All.FirstOrDefault(p => p.AccountId == id);
             return res;
         }
+
+        public Accounts ReadByEmail(string email)
+        {
+            var res = All.FirstOrDefault(p => p.Email == email);
+            return res;
+        }
         #endregion
 
         public int Remove(int id)

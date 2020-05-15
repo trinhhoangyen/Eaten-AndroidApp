@@ -1,0 +1,17 @@
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Release\netcoreapp3.1\EatenAPI.BLL.deps.json
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Release\netcoreapp3.1\EatenAPI.BLL.runtimeconfig.json
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Release\netcoreapp3.1\EatenAPI.BLL.runtimeconfig.dev.json
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Release\netcoreapp3.1\EatenAPI.BLL.dll
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Release\netcoreapp3.1\EatenAPI.BLL.pdb
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Release\netcoreapp3.1\EatenAPI.Common.dll
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Release\netcoreapp3.1\EatenAPI.DAL.dll
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Release\netcoreapp3.1\EatenAPI.Common.pdb
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Release\netcoreapp3.1\EatenAPI.DAL.pdb
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Release\netcoreapp3.1\EatenAPI.BLL.csprojAssemblyReference.cache
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Release\netcoreapp3.1\EatenAPI.BLL.csproj.CoreCompileInputs.cache
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Release\netcoreapp3.1\EatenAPI.BLL.AssemblyInfoInputs.cache
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Release\netcoreapp3.1\EatenAPI.BLL.AssemblyInfo.cs
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Release\netcoreapp3.1\EatenAPI.BLL.csproj.CopyComplete
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Release\netcoreapp3.1\EatenAPI.BLL.dll
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Release\netcoreapp3.1\EatenAPI.BLL.pdb
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Release\netcoreapp3.1\EatenAPI.BLL.genruntimeconfig.cache
