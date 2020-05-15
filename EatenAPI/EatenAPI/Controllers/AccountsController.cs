@@ -27,11 +27,11 @@ namespace EatenAPI.WEB.Controllers
             return Ok(res);
         }
 
-        [HttpPost("get-by-email")]
-        public IActionResult getAccountByEmail([FromBody]AccountReq req)
+        [HttpPost("get-account-login")]
+        public IActionResult getAccountLogin([FromBody]AccountReq req)
         {
             var res = new SingleRsp();
-            res = _svc.ReadByEmail(req.Email);
+            res = _svc.Login(req.Email, req.Password);
             return Ok(res);
         }
 

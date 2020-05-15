@@ -37,11 +37,11 @@ namespace EatenAPI.BLL
             return res;
         }
 
-        public SingleRsp ReadByEmail(string email)
+        public SingleRsp Login(string email, string password)
         {
             var res = new SingleRsp();
 
-            var m = _rep.ReadByEmail(email);
+            var m = _rep.Login(email, password);
             res.Data = m;
 
             return res;

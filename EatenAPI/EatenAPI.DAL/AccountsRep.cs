@@ -17,9 +17,9 @@ namespace EatenAPI.DAL
             return res;
         }
 
-        public Accounts ReadByEmail(string email)
+        public Accounts Login(string email, string password)
         {
-            var res = All.FirstOrDefault(p => p.Email == email);
+            var res = All.FirstOrDefault(p => p.Email == email && p.Password == password);
             return res;
         }
         #endregion
