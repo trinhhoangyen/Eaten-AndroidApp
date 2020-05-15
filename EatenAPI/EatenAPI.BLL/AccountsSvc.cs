@@ -37,6 +37,16 @@ namespace EatenAPI.BLL
             return res;
         }
 
+        public SingleRsp ReadByEmail(string email)
+        {
+            var res = new SingleRsp();
+
+            var m = _rep.ReadByEmail(email);
+            res.Data = m;
+
+            return res;
+        }
+
         public SingleRsp CreateAccount(AccountReq acc)
         {
             var res = new SingleRsp();
