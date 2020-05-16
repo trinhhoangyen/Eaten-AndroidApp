@@ -8,13 +8,14 @@ GO
 USE EatenDatabase
 GO
 
+--- Create table
 CREATE TABLE Accounts
 (
 	AccountID int identity(1,1) primary key,
 	Email varchar(50) not null,
 	Password char(20) not null,
 	DisplayName nvarchar(50) not null,
-	Avatar image,
+	Avatar varchar(200),
 	Gender nvarchar(10),
 	YearOfBirth int
 )
@@ -33,8 +34,8 @@ CREATE TABLE Posts
 CREATE TABLE Pictures
 (
 	PictureID int identity(1,1) primary key,
-	PostID int ,
-	Picture image,
+	PostID int,
+	Picture varchar(200),
 
 	foreign key (PostID) references Posts (PostID)
 )
@@ -69,7 +70,7 @@ CREATE TABLE Post_FoodCategory
 	foreign key (CategoryID) references FoodCategories (CategoryID)
 )
 
---- 
+--- Insert data
 INSERT Accounts
 values ('1751012086yen@ou.edu.vn', '1', N'Trịnh Hoàng Yến', null, N'Nữ', 1999),
 		('1751010177tu@ou.edu.vn', '1', N'Nguyễn Thanh Tú', null, N'Nam', 1999),
