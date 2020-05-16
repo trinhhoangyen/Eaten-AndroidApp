@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HKII-2020\\LTDD\\LTDD_TH71_k17\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj": {}
+    "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj": {}
   },
   "projects": {
-    "D:\\HKII-2020\\LTDD\\LTDD_TH71_k17\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj": {
+    "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HKII-2020\\LTDD\\LTDD_TH71_k17\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj",
+        "projectUniqueName": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj",
         "projectName": "EatenAPI.Common",
-        "projectPath": "D:\\HKII-2020\\LTDD\\LTDD_TH71_k17\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj",
+        "projectPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj",
         "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\HKII-2020\\LTDD\\LTDD_TH71_k17\\EatenAPI\\EatenAPI.Common\\obj\\",
+        "outputPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
