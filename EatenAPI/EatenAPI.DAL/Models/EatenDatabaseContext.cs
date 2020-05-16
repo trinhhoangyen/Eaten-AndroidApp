@@ -28,6 +28,7 @@ namespace EatenAPI.DAL.Models
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Data Source=.\\THYEN;Initial Catalog=EatenDatabase;Persist Security Info=True;User ID=sa;Password=221199;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True;");
+                //optionsBuilder.UseSqlServer("Data Source=.\\THYEN;Initial Catalog=EatenDatabase;Persist Security Info=True;User ID=sa;Password=221199;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True;");
             }
         }
 
