@@ -7,8 +7,7 @@ namespace EatenAPI.DAL.Models
     {
         public int PictureId { get; set; }
         public int? PostId { get; set; }
-        public byte[] Picture { get; set; }
-
+        public string Picture { get; set; }
         public virtual Posts Post { get; set; }
     }
 }
