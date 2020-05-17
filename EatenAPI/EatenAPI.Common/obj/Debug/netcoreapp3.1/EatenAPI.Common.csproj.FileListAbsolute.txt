@@ -9,3 +9,14 @@ D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1
 D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.dll
 D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.pdb
 D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.genruntimeconfig.cache
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\bin\Debug\netcoreapp3.1\EatenAPI.Common.deps.json
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\bin\Debug\netcoreapp3.1\EatenAPI.Common.runtimeconfig.json
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\bin\Debug\netcoreapp3.1\EatenAPI.Common.runtimeconfig.dev.json
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\bin\Debug\netcoreapp3.1\EatenAPI.Common.dll
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\bin\Debug\netcoreapp3.1\EatenAPI.Common.pdb
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.csproj.CoreCompileInputs.cache
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.AssemblyInfoInputs.cache
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.AssemblyInfo.cs
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.dll
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.pdb
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Debug\netcoreapp3.1\EatenAPI.Common.genruntimeconfig.cache

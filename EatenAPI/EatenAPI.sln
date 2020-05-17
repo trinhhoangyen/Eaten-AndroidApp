@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29926.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatenAPI.WEB", "EatenAPI\EatenAPI.WEB.csproj", "{9D7695C5-D22A-47D2-A876-0B4B17A987D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EatenAPI.WEB", "EatenAPI\EatenAPI.WEB.csproj", "{9D7695C5-D22A-47D2-A876-0B4B17A987D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatenAPI.DAL", "EatenAPI.DAL\EatenAPI.DAL.csproj", "{02765852-5272-4EE9-8913-0C458A064868}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EatenAPI.DAL", "EatenAPI.DAL\EatenAPI.DAL.csproj", "{02765852-5272-4EE9-8913-0C458A064868}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatenAPI.BLL", "EatenAPI.BLL\EatenAPI.BLL.csproj", "{94612E4D-1067-43A6-9ED9-7C84DE291D64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EatenAPI.BLL", "EatenAPI.BLL\EatenAPI.BLL.csproj", "{94612E4D-1067-43A6-9ED9-7C84DE291D64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EatenAPI.Common", "EatenAPI.Common\EatenAPI.Common.csproj", "{5622328D-4864-426F-870B-BF3EAB324640}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EatenAPI.Common", "EatenAPI.Common\EatenAPI.Common.csproj", "{5622328D-4864-426F-870B-BF3EAB324640}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{CB528FF9-F29F-4CE6-BFFF-ED74D28C3307}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5622328D-4864-426F-870B-BF3EAB324640}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5622328D-4864-426F-870B-BF3EAB324640}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5622328D-4864-426F-870B-BF3EAB324640}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CB528FF9-F29F-4CE6-BFFF-ED74D28C3307}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB528FF9-F29F-4CE6-BFFF-ED74D28C3307}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB528FF9-F29F-4CE6-BFFF-ED74D28C3307}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB528FF9-F29F-4CE6-BFFF-ED74D28C3307}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
