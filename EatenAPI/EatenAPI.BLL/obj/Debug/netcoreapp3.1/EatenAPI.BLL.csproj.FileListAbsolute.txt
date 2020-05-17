@@ -15,20 +15,3 @@ D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.BLL\bin\Debug\netcoreapp3.1\Ea
 D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.BLL\bin\Debug\netcoreapp3.1\EatenAPI.Common.pdb
 D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.BLL\bin\Debug\netcoreapp3.1\EatenAPI.DAL.pdb
 D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.BLL\obj\Debug\netcoreapp3.1\EatenAPI.BLL.csproj.CopyComplete
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Debug\netcoreapp3.1\EatenAPI.BLL.deps.json
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Debug\netcoreapp3.1\EatenAPI.BLL.runtimeconfig.json
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Debug\netcoreapp3.1\EatenAPI.BLL.runtimeconfig.dev.json
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Debug\netcoreapp3.1\EatenAPI.BLL.dll
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Debug\netcoreapp3.1\EatenAPI.BLL.pdb
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Debug\netcoreapp3.1\EatenAPI.Common.dll
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Debug\netcoreapp3.1\EatenAPI.DAL.dll
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Debug\netcoreapp3.1\EatenAPI.Common.pdb
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\bin\Debug\netcoreapp3.1\EatenAPI.DAL.pdb
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Debug\netcoreapp3.1\EatenAPI.BLL.csprojAssemblyReference.cache
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Debug\netcoreapp3.1\EatenAPI.BLL.csproj.CoreCompileInputs.cache
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Debug\netcoreapp3.1\EatenAPI.BLL.AssemblyInfoInputs.cache
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Debug\netcoreapp3.1\EatenAPI.BLL.AssemblyInfo.cs
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Debug\netcoreapp3.1\EatenAPI.BLL.csproj.CopyComplete
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Debug\netcoreapp3.1\EatenAPI.BLL.dll
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Debug\netcoreapp3.1\EatenAPI.BLL.pdb
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.BLL\obj\Debug\netcoreapp3.1\EatenAPI.BLL.genruntimeconfig.cache

@@ -13,18 +13,3 @@ D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.DAL\obj\Debug\netcoreapp3.1\Ea
 D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.DAL\bin\Debug\netcoreapp3.1\EatenAPI.Common.dll
 D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.DAL\bin\Debug\netcoreapp3.1\EatenAPI.Common.pdb
 D:\HKII-2020\LTDD\LTDD_TH71_k17\EatenAPI\EatenAPI.DAL\obj\Debug\netcoreapp3.1\EatenAPI.DAL.csproj.CopyComplete
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\bin\Debug\netcoreapp3.1\EatenAPI.DAL.deps.json
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\bin\Debug\netcoreapp3.1\EatenAPI.DAL.runtimeconfig.json
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\bin\Debug\netcoreapp3.1\EatenAPI.DAL.runtimeconfig.dev.json
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\bin\Debug\netcoreapp3.1\EatenAPI.DAL.dll
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\bin\Debug\netcoreapp3.1\EatenAPI.DAL.pdb
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\bin\Debug\netcoreapp3.1\EatenAPI.Common.dll
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\bin\Debug\netcoreapp3.1\EatenAPI.Common.pdb
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\obj\Debug\netcoreapp3.1\EatenAPI.DAL.csprojAssemblyReference.cache
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\obj\Debug\netcoreapp3.1\EatenAPI.DAL.csproj.CoreCompileInputs.cache
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\obj\Debug\netcoreapp3.1\EatenAPI.DAL.AssemblyInfoInputs.cache
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\obj\Debug\netcoreapp3.1\EatenAPI.DAL.AssemblyInfo.cs
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\obj\Debug\netcoreapp3.1\EatenAPI.DAL.csproj.CopyComplete
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\obj\Debug\netcoreapp3.1\EatenAPI.DAL.dll
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\obj\Debug\netcoreapp3.1\EatenAPI.DAL.pdb
-C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.DAL\obj\Debug\netcoreapp3.1\EatenAPI.DAL.genruntimeconfig.cache

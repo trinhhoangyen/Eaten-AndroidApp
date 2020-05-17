@@ -9,6 +9,8 @@ namespace EatenAPI.DAL
     using Common.Rsp;
     using EatenAPI.DAL.ViewModels;
     using System.Linq;
+    using System.Net.WebSockets;
+
     public class PostsRep : GenericRep<EatenDatabaseContext, Posts>
     {
         #region --Override--
@@ -101,6 +103,7 @@ namespace EatenAPI.DAL
             var post = context.Posts.ToList();
             var picture = context.Pictures.ToList();
             var comment = context.Comments.ToList();
+            var account = context.Accounts.ToList();
 
             var quantity = from p in post
                            join c in comment on p.PostId equals c.PostId
@@ -114,7 +117,10 @@ namespace EatenAPI.DAL
 
             //join q in quantity on p.PostId equals q.PostId
             var res = from p in post
-                      join pt in picture on p.PostId equals pt.PostId
+                      join pt in picture on p.PostId equals pt.PostId 
+                      join a in account on p.AccountId equals a.AccountId
+                      join q in quantity on p.PostId equals q.PostId into temp
+                      from subtemp in temp.DefaultIfEmpty()
                       select new PostInfoViewModel
                       {
                           PostId = p.PostId,
@@ -122,11 +128,10 @@ namespace EatenAPI.DAL
                           PostName = p.PostName,
                           Content = p.Content,
                           Address = p.Address,
-                          Picture = "",
-                          DisplayName = p.Account.DisplayName,
-                          ReactQuantity = 0
+                          Picture = pt.Picture,
+                          DisplayName = a.DisplayName,
+                          ReactQuantity = subtemp == null?0:subtemp.Quantity
                       };
-
             return res;
         }
 
