@@ -28,7 +28,7 @@ namespace EatenAPI.DAL.Models
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 //optionsBuilder.UseSqlServer("Data Source=NGUYENTU\\NTSEVER;Initial Catalog=EatenDatabase;Persist Security Info=True;User ID=sa;Password=123456;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True;");
-                optionsBuilder.UseSqlServer("Server=tcp:eaten.database.windows.net,1433;Initial Catalog=EatenDatabase;Persist Security Info=False;User ID=thym;Password=Passw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+                optionsBuilder.UseSqlServer("Server=tcp:eatenapi.database.windows.net,1433;Initial Catalog=EatenDatabase;Persist Security Info=False;User ID=thym;Password=Passw0rd;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
@@ -41,7 +41,7 @@ namespace EatenAPI.DAL.Models
 
                 entity.Property(e => e.AccountId).HasColumnName("AccountID");
 
-                entity.Property(e => e.Avatar)
+                entity.Property(e => e.AvatarURL)
                     .HasMaxLength(200)
                     .IsUnicode(false);
 
@@ -112,7 +112,7 @@ namespace EatenAPI.DAL.Models
 
                 entity.Property(e => e.PictureId).HasColumnName("PictureID");
 
-                entity.Property(e => e.Picture)
+                entity.Property(e => e.PictureURL)
                     .HasMaxLength(200)
                     .IsUnicode(false);
 

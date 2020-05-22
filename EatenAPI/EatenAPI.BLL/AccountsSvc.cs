@@ -55,7 +55,7 @@ namespace EatenAPI.BLL
                 Email = acc.Email,
                 Password = acc.Password,
                 DisplayName = acc.DisplayName,
-                Avatar = acc.Avatar,
+                AvatarURL = acc.AvatarURL,
                 Gender = acc.Gender,
                 YearOfBirth = acc.YearOfBirth
             };
@@ -72,7 +72,7 @@ namespace EatenAPI.BLL
                 Email = acc.Email,
                 Password = acc.Password,
                 DisplayName = acc.DisplayName,
-                Avatar = acc.Avatar,
+                AvatarURL = acc.AvatarURL,
                 Gender = acc.Gender,
                 YearOfBirth = acc.YearOfBirth
             };
