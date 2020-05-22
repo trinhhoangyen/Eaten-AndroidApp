@@ -100,7 +100,7 @@ public class RegisterActivity extends AppCompatActivity {
 
     private void Submit(String data) {
         final String savedata = data;
-        String URL = "https://eaten.azurewebsites.net/api/Accounts/create-account/";
+        String URL = "https://eatenapi.azurewebsites.net/api/Accounts/create-account/";
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
