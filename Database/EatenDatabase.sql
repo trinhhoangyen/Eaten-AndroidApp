@@ -19,7 +19,6 @@ CREATE TABLE Accounts
 	Gender nvarchar(10),
 	YearOfBirth int
 )
-
 CREATE TABLE Posts
 (
 	PostID int identity(1,1) primary key,
@@ -30,7 +29,6 @@ CREATE TABLE Posts
 
 	foreign key (AccountID) references Accounts (AccountID)
 )
-
 CREATE TABLE Pictures
 (
 	PictureID int identity(1,1) primary key,
@@ -39,7 +37,6 @@ CREATE TABLE Pictures
 
 	foreign key (PostID) references Posts (PostID)
 )
-
 CREATE TABLE Comments
 (
 	CommentID int identity(1,1),
@@ -53,13 +50,11 @@ CREATE TABLE Comments
 	foreign key (PostID) references Posts (PostID),
 	foreign key (AccountID) references Accounts (AccountID)
 )
-
 CREATE TABLE FoodCategories
 (
 	CategoryID int identity(1,1) primary key,
 	CategoryName nvarchar(20)  not null
 )
-
 CREATE TABLE Post_FoodCategory
 (
 	PostID int,
@@ -76,7 +71,6 @@ values ('1751012086yen@ou.edu.vn', '1', N'Trịnh Hoàng Yến', null, N'Nữ', 
 		('1751010177tu@ou.edu.vn', '1', N'Nguyễn Thanh Tú', null, N'Nam', 1999),
 		('1751010085minh@ou.edu.vn', '1', N'Lưu Hoàng Minh', null, N'Nam', 1999),
 		('1751010046huy@ou.edu.vn', '1', N'Nguyễn Hoàng Huy', null, N'Nam', 1999)
-
 INSERT Posts
 values (1, N'Belgo Belgian Craft Beer Brewery - Lê Ngô Cát', 
 		N'Belgo mới mở ở số 2 Lê Ngô Cát, ngay trung tâm quận 3 không gian thoáng hơn, trang trí nội thất cũng theo phong cách cũ, có khoảng ngoài trời khá mát mẻ.
@@ -93,13 +87,11 @@ values (1, N'Belgo Belgian Craft Beer Brewery - Lê Ngô Cát',
 		(4, N'The Pizza Company - Lê Văn Sỹ', 
 			N'So với domido thì hơi mắc,nhưng đồ ăn cũng ngon. Do thấy có khuyến mãi nên mình đến chứ cũng chưa biết có quay lại hay ko do giá hơi mắc.', 
 			N'333 Lê Văn Sỹ, P. 13, Quận 3, TP. HCM')
-
 INSERT Pictures
 values (1, null),
 		(2, null),
 		(3, null),
 		(4, null)
-
 INSERT Comments
 values (1, 4, N'Theo mình món này những bạn sợ béo sẽ không thích', 0, null),
 		(2, 3, N'Cùng quan điểm với chủ thớt', 0, null),
@@ -107,7 +99,6 @@ values (1, 4, N'Theo mình món này những bạn sợ béo sẽ không thích'
 		(4, 1, null, 1, null),
 		(1, 2, null, 0, 1),
 		(2, 3, null, 0, 5)
-
 INSERT FoodCategories
 values (N'Ăn vặt'),
 		(N'Salad'),
@@ -119,7 +110,6 @@ values (N'Ăn vặt'),
 		(N'Chay'),
 		(N'Nước'),
 		(N'Khô')
-
 INSERT Post_FoodCategory
 values (1, 10),
 		(2, 9),
