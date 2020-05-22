@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void Submit(String data) {
         final String savedata = data;
-        String URL = "https://eaten.azurewebsites.net/api/Accounts/get-account-login/";
+        String URL = "https://eatenapi.azurewebsites.net/api/Accounts/get-account-login/";
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                     JSONObject object = new JSONObject(response);
 
                     JSONObject objResult = object.getJSONObject("data");
-                    Account account = new Account(Integer.parseInt(objResult.getString("accountId")), Integer.parseInt(objResult.getString("yearOfBirth")), objResult.getString("email"), objResult.getString("password").trim(), objResult.getString("displayName"), objResult.getString("avatar"), objResult.getString("gender"));
+                    Account account = new Account(Integer.parseInt(objResult.getString("accountId")), Integer.parseInt(objResult.getString("yearOfBirth")), objResult.getString("email"), objResult.getString("password").trim(), objResult.getString("displayName"), objResult.getString("avatarURL"), objResult.getString("gender"));
                     if (account.getEmail().equals(emailValue) && account.getPassword().equals(passwordValue))
                         Toast.makeText(getApplicationContext(), "Đăng nhập thành công!", Toast.LENGTH_LONG).show();
                     else
