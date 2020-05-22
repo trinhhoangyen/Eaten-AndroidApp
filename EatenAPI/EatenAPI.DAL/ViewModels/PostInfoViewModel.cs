@@ -11,7 +11,7 @@ namespace EatenAPI.DAL.ViewModels
         public string PostName { get; set; }
         public string Content { get; set; }
         public string Address { get; set; }
-        public string Picture { get; set; }
+        public string PictureURL { get; set; }
         public string DisplayName { get; set; }
         public int ReactQuantity { get; set; }
     }

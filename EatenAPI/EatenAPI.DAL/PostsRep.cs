@@ -128,7 +128,7 @@ namespace EatenAPI.DAL
                           PostName = p.PostName,
                           Content = p.Content,
                           Address = p.Address,
-                          Picture = pt.PictureURL,
+                          PictureURL = pt.PictureURL,
                           DisplayName = a.DisplayName,
                           ReactQuantity = subtemp == null?0:subtemp.Quantity
                       };
