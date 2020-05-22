@@ -43,7 +43,7 @@ namespace EatenAPI.BLL
             var picNew = new Pictures()
             {
                 PostId = pic.PostId,
-                Picture = pic.Picture
+                PictureURL = pic.PictureURL
             };
             res = _rep.CreatePicture(picNew);
             return res;
@@ -56,7 +56,7 @@ namespace EatenAPI.BLL
             {
                 PictureId = pic.PictureId,
                 PostId = pic.PostId,
-                Picture = pic.Picture
+                PictureURL = pic.PictureURL
             };
             res = _rep.UpdatePicture(picUpdate);
             return res;

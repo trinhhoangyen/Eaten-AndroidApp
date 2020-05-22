@@ -37,6 +37,16 @@ namespace EatenAPI.BLL
             return res;
         }
 
+        public SingleRsp Login(string email, string password)
+        {
+            var res = new SingleRsp();
+
+            var m = _rep.Login(email, password);
+            res.Data = m;
+
+            return res;
+        }
+
         public SingleRsp CreateAccount(AccountReq acc)
         {
             var res = new SingleRsp();
@@ -45,7 +55,7 @@ namespace EatenAPI.BLL
                 Email = acc.Email,
                 Password = acc.Password,
                 DisplayName = acc.DisplayName,
-                Avatar = acc.Avatar,
+                AvatarURL = acc.AvatarURL,
                 Gender = acc.Gender,
                 YearOfBirth = acc.YearOfBirth
             };
@@ -62,7 +72,7 @@ namespace EatenAPI.BLL
                 Email = acc.Email,
                 Password = acc.Password,
                 DisplayName = acc.DisplayName,
-                Avatar = acc.Avatar,
+                AvatarURL = acc.AvatarURL,
                 Gender = acc.Gender,
                 YearOfBirth = acc.YearOfBirth
             };

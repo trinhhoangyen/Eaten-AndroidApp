@@ -10,6 +10,7 @@ namespace EatenAPI.BLL
 
     using Common.Req;
     using Common.Rsp;
+    using EatenAPI.DAL.ViewModels;
     using System.Linq;
     public class PostsSvc : GenericSvc<PostsRep, Posts>
     {
@@ -71,6 +72,12 @@ namespace EatenAPI.BLL
             var res = new SingleRsp();
             var acc = _rep.All.First(p => p.PostId == id);
             res = _rep.DeletePost(acc);
+            return res;
+        }
+
+        public IEnumerable<PostInfoViewModel> GetAllPostInfo()
+        {
+            var res = _rep.GetAllPostInfo();
             return res;
         }
     }

@@ -16,6 +16,12 @@ namespace EatenAPI.DAL
             var res = All.FirstOrDefault(p => p.AccountId == id);
             return res;
         }
+
+        public Accounts Login(string email, string password)
+        {
+            var res = All.FirstOrDefault(p => p.Email == email && p.Password == password);
+            return res;
+        }
         #endregion
 
         public int Remove(int id)

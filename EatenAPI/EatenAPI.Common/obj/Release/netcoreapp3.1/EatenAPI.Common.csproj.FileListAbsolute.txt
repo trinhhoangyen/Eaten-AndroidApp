@@ -1,0 +1,12 @@
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\bin\Release\netcoreapp3.1\EatenAPI.Common.deps.json
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\bin\Release\netcoreapp3.1\EatenAPI.Common.runtimeconfig.json
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\bin\Release\netcoreapp3.1\EatenAPI.Common.runtimeconfig.dev.json
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\bin\Release\netcoreapp3.1\EatenAPI.Common.dll
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\bin\Release\netcoreapp3.1\EatenAPI.Common.pdb
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Release\netcoreapp3.1\EatenAPI.Common.csprojAssemblyReference.cache
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Release\netcoreapp3.1\EatenAPI.Common.csproj.CoreCompileInputs.cache
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Release\netcoreapp3.1\EatenAPI.Common.AssemblyInfoInputs.cache
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Release\netcoreapp3.1\EatenAPI.Common.AssemblyInfo.cs
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Release\netcoreapp3.1\EatenAPI.Common.dll
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Release\netcoreapp3.1\EatenAPI.Common.pdb
+C:\Users\myway\OneDrive\Máy tính\Eaten-Android\EatenAPI\EatenAPI.Common\obj\Release\netcoreapp3.1\EatenAPI.Common.genruntimeconfig.cache

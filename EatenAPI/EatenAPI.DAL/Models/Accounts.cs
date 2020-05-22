@@ -15,7 +15,7 @@ namespace EatenAPI.DAL.Models
         public string Email { get; set; }
         public string Password { get; set; }
         public string DisplayName { get; set; }
-        public string Avatar { get; set; }
+        public string AvatarURL { get; set; }
         public string Gender { get; set; }
         public int? YearOfBirth { get; set; }
 

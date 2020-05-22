@@ -27,6 +27,14 @@ namespace EatenAPI.WEB.Controllers
             return Ok(res);
         }
 
+        [HttpPost("get-account-login")]
+        public IActionResult getAccountLogin([FromBody]AccountReq req)
+        {
+            var res = new SingleRsp();
+            res = _svc.Login(req.Email, req.Password);
+            return Ok(res);
+        }
+
         [HttpPost("get-all")]
         public IActionResult getAllAccount()
         {

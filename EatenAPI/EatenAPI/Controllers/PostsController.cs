@@ -35,6 +35,14 @@ namespace EatenAPI.WEB.Controllers
             return Ok(res);
         }
 
+        [HttpPost("get-all-post-info")]
+        public IActionResult getAllPostInfo()
+        {
+            var res = new SingleRsp();
+            res.Data = _svc.GetAllPostInfo();
+            return Ok(res);
+        }
+
         [HttpPost("create-post")]
         public IActionResult CreatePost([FromBody]PostReq req)
         {
