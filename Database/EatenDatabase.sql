@@ -15,7 +15,7 @@ CREATE TABLE Accounts
 	Email varchar(50) not null,
 	Password char(20) not null,
 	DisplayName nvarchar(50) not null,
-	Avatar varchar(200),
+	AvatarURL varchar(200),
 	Gender nvarchar(10),
 	YearOfBirth int
 )
@@ -35,7 +35,7 @@ CREATE TABLE Pictures
 (
 	PictureID int identity(1,1) primary key,
 	PostID int,
-	Picture varchar(200),
+	PictureURL varchar(200),
 
 	foreign key (PostID) references Posts (PostID)
 )
