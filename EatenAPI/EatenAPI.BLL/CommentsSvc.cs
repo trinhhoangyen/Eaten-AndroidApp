@@ -10,6 +10,7 @@ namespace EatenAPI.BLL
 
     using Common.Req;
     using Common.Rsp;
+    using EatenAPI.DAL.ViewModels;
     using System.Linq;
     public class CommentsSvc : GenericSvc<CommentsRep, Comments>
     {
@@ -73,6 +74,12 @@ namespace EatenAPI.BLL
             var res = new SingleRsp();
             var cmt = _rep.All.First(p => p.CommentId == id);
             res = _rep.DeleteComment(cmt);
+            return res;
+        }
+
+        public IEnumerable<CommentViewModel> GetAllCommentInfo()
+        {
+            var res = _rep.GetAllCommentInfo();
             return res;
         }
     }
