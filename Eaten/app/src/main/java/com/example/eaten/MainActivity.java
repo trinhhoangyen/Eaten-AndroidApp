@@ -83,8 +83,11 @@ public class MainActivity extends AppCompatActivity {
 
                     JSONObject objResult = object.getJSONObject("data");
                     Account account = new Account(Integer.parseInt(objResult.getString("accountId")), Integer.parseInt(objResult.getString("yearOfBirth")), objResult.getString("email"), objResult.getString("password").trim(), objResult.getString("displayName"), objResult.getString("avatarURL"), objResult.getString("gender"));
-                    if (account.getEmail().equals(emailValue) && account.getPassword().equals(passwordValue))
-                        Toast.makeText(getApplicationContext(), "Đăng nhập thành công!", Toast.LENGTH_LONG).show();
+                    if (account.getEmail().equals(emailValue) && account.getPassword().equals(passwordValue)){
+                        //Toast.makeText(getApplicationContext(), "Đăng nhập thành công!", Toast.LENGTH_LONG).show();
+                        Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
+                        startActivity(intentHome);
+                    }
                     else
                         Toast.makeText(getApplicationContext(), "Đăng nhập thất bại!", Toast.LENGTH_LONG).show();
                 } catch (JSONException e) {
