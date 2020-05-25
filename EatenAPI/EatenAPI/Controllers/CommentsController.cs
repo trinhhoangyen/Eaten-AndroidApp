@@ -35,6 +35,14 @@ namespace EatenAPI.WEB.Controllers
             return Ok(res);
         }
 
+        [HttpPost("get-all-comment-info")]
+        public IActionResult getAllPostInfo()
+        {
+            var res = new SingleRsp();
+            res.Data = _svc.GetAllCommentInfo();
+            return Ok(res);
+        }
+
         [HttpPost("create-comment")]
         public IActionResult CreateComment([FromBody]CommentReq req)
         {

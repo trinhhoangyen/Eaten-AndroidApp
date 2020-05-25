@@ -7,6 +7,7 @@ using System.Text;
 namespace EatenAPI.DAL
 {
     using Common.Rsp;
+    using EatenAPI.DAL.ViewModels;
     using System.Linq;
     public class CommentsRep : GenericRep<EatenDatabaseContext, Comments>
     {
@@ -91,6 +92,27 @@ namespace EatenAPI.DAL
                     }
                 }
             }
+            return res;
+        }
+
+        public IEnumerable<CommentViewModel> GetAllCommentInfo()
+        {
+            var context = new EatenDatabaseContext();
+
+            var account = context.Accounts.ToList();
+            var comment = context.Comments.ToList();
+
+            //join q in quantity on p.PostId equals q.PostId
+            var res = from c in comment
+                      join a in account on c.AccountId equals a.AccountId
+                      select new CommentViewModel
+                      {
+                          PostId = c.PostId,
+                          AccountId = c.AccountId,
+                          AvatarURL = a.AvatarURL,
+                          DisplayName = a.DisplayName,
+                          Content = c.Content
+                      };
             return res;
         }
     }
