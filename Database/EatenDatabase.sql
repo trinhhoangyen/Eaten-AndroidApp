@@ -15,7 +15,7 @@ CREATE TABLE Accounts
 	Email varchar(50) not null,
 	Password char(20) not null,
 	DisplayName nvarchar(50) not null,
-	AvatarURL varchar(200),
+	AvatarURL ntext,
 	Gender nvarchar(10),
 	YearOfBirth int
 )
@@ -33,7 +33,7 @@ CREATE TABLE Pictures
 (
 	PictureID int identity(1,1) primary key,
 	PostID int,
-	PictureURL varchar(200),
+	PictureURL ntext,
 
 	foreign key (PostID) references Posts (PostID)
 )
@@ -106,17 +106,17 @@ values (1, N'Belgo Belgian Craft Beer Brewery - Lê Ngô Cát',
 		(7, N'HighLands coffee',
 			N'Địa điểm ưa thích nhưng hôm nay mới lên app review được. View quán đẹp, thức uống khá ngon, mình rất thích các món desert ở đây. Sẽ quay lại',
 			N'172 Nguyễn Văn Khối, Phường 10, Gò Vấp, Hồ Chí Minh')
-
+			-- delete Pictures
 INSERT Pictures
 values (1, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/foody-upload-api-foody-mobile-6-jpg-181115113413.jpg?alt=media&token=493aec28-38e7-4851-9586-14b517b0919b'),
-		(2, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/foody-upload-api-foody-mobile-17-jpg-180823161556.jpg?alt=media&token=57809acf-7fca-43a6-a5f0-39e0e1dd9997'),
+		(2, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/foody-upload-api-foody-mobile-9-190306142316.jpg?alt=media&token=9212b882-a8fe-4c5f-99f4-479f12ee25f8&fbclid=IwAR22dGyH_XA7Pr1pZh7-DoqD62KVCR4MI9IICmZnDc8d7IOyXdeQERqUumU'),
 		(3, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/foody-mobile-img_0954-jpg-344-635947742274439596.jpg?alt=media&token=d131f7e4-0146-4812-a7d4-4d07723e0c28'),
 		(4, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/foody-upload-api-foody-mobile-20-190620104031.jpg?alt=media&token=6a4c7a0b-c5a3-4161-aac8-04fdb0a7b534'),
 		(5, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/foody-upload-api-foody-mobile-20-190620104031.jpg?alt=media&token=6a4c7a0b-c5a3-4161-aac8-04fdb0a7b534'),
-		(6, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/foody-upload-api-foody-mobile-20-190620104031.jpg?alt=media&token=6a4c7a0b-c5a3-4161-aac8-04fdb0a7b534'),
-		(7, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/foody-upload-api-foody-mobile-20-190620104031.jpg?alt=media&token=6a4c7a0b-c5a3-4161-aac8-04fdb0a7b534'),
-		(8, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/foody-upload-api-foody-mobile-20-190620104031.jpg?alt=media&token=6a4c7a0b-c5a3-4161-aac8-04fdb0a7b534'),
-		(9, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/foody-upload-api-foody-mobile-20-190620104031.jpg?alt=media&token=6a4c7a0b-c5a3-4161-aac8-04fdb0a7b534')
+		(6, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/unnamed.jpg?alt=media&token=0002b199-25b5-4803-809a-a93454dc7954&fbclid=IwAR0E_24lbieVQGOg7kTW1Y7PBnnSt6gAHa3b2s9RSiLnSI35mKEXcjM74q4'),
+		(7, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/L1117508.jpg?alt=media&token=05d3d20d-32fd-4e77-bde4-915d4d7ac320&fbclid=IwAR0rtS6m2FpZ2MR_12uctEEphbNqMQODqfi3UqHZsLgyCMCZjnQZox44hV0'),
+		(8, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/4687824921934776476368563682900723646857216n-min-15785681307161988536441-crop-15785681375501813632109.png?alt=media&token=6cb629ec-483a-4bde-89e5-314c4c0a0547&fbclid=IwAR0JRb7kAtMWpy0b3cB97j-JmqDD9Mxgp-54zSWi3IeWhae8cPq255kFJj4'),
+		(9, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/highland-coffee-nha-trang-2.jpg?alt=media&token=8875dde2-7a1d-45d3-a438-48e9066d33c1&fbclid=IwAR2oyRaUhk1JSQgS8V3za51Wb2wxQ74bRcrAACs7ll605oUMS-LUB2oSHMQ')
 
 INSERT Comments
 values (1, 4, N'Theo mình món này những bạn sợ béo sẽ không thích', 0, null),
@@ -154,13 +154,13 @@ values (N'Ăn vặt'),
 		(N'Khô')
 
 INSERT Post_FoodCategory
-values (1, 10),
-		(2, 9),
-		(3, 8),
-		(4, 7),
-		(1, 6),
-		(2, 5),
-		(3, 4),
-		(4, 3),
-		(1, 2),
-		(2, 1)
+values (1, 10), (1, 7), (1, 8),
+		(2, 9), (2, 5), (2, 7),
+		(3, 2), (3, 5),
+		(4, 3), (4, 4),
+		(5, 1), (5, 4), (5, 9), (5, 3),
+		(6, 6), (6, 1), (6, 9),
+		(7, 3), (7, 8),
+		(8, 8), (8, 7), (8, 5),
+		(9, 1), (9, 2), (9, 3), (9, 10)
+		-- DELETE Post_FoodCategory
