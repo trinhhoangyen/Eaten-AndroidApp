@@ -8,6 +8,9 @@ namespace EatenAPI.DAL
 {
     using Common.Rsp;
     using EatenAPI.DAL.ViewModels;
+    using Microsoft.Data.SqlClient;
+    using Microsoft.EntityFrameworkCore;
+    using System.Data;
     using System.Linq;
     using System.Net.WebSockets;
 
@@ -135,5 +138,73 @@ namespace EatenAPI.DAL
             return res;
         }
 
+        public List<Posts> SearchPost(string kw)
+        {
+            List<Posts> res = new List<Posts>();
+            var cnn = (SqlConnection)Context.Database.GetDbConnection();
+            if (cnn.State == ConnectionState.Closed)
+            {
+                cnn.Open();
+            }
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter();
+                DataSet ds = new DataSet();
+                var cmd = cnn.CreateCommand();
+                cmd.CommandText = "SearchPost";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@kw", kw);
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+                if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    foreach (DataRow row in ds.Tables[0].Rows)
+                    {
+                        Posts p = new Posts()
+                        {
+                            PostId = (int)row["PostId"],
+                            AccountId = (int)row["PostId"],
+                            PostName = row["PostId"].ToString(),
+                            Content = row["PostId"].ToString(),
+                            Address = row["PostId"].ToString()
+                        };
+                        res.Add(p);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                res = null;
+            }
+            return res;
+        }
+        public bool AddPost(int AccountId, string PostName, string Content, string Address, string PictureURL)
+        {
+            var cnn = (SqlConnection)Context.Database.GetDbConnection();
+            if (cnn.State == ConnectionState.Closed)
+            {
+                cnn.Open();
+            }
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter();
+                DataSet ds = new DataSet();
+                var cmd = cnn.CreateCommand();
+                cmd.CommandText = "AddPost";
+                cmd.Parameters.AddWithValue("@AccountId", AccountId);
+                cmd.Parameters.AddWithValue("@PostName", PostName);
+                cmd.Parameters.AddWithValue("@Content", Content);
+                cmd.Parameters.AddWithValue("@Address", Address);
+                cmd.Parameters.AddWithValue("@PictureURL", PictureURL);
+                cmd.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand = cmd; //thuc hien
+                da.Fill(ds);
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
