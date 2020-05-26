@@ -19,3 +19,15 @@ with tam as (
 END
 GO
 EXEC SearchPost N'Hồ Chí Minh'
+
+---
+CREATE PROC AddPost(@AccountId int,@PostName nvarchar(50),@Content ntext, @Address nvarchar(100), @PictureURL ntext)
+AS
+BEGIN
+	INSERT into Posts values(@AccountId, @PostName, @Content, @Address)
+	declare @postId int
+	select @postId = PostID from Posts where AccountId = @AccountId and PostName = @PostName and Content like @Content and Address = @Address
+
+	INSERT Pictures values(@postId, @PictureURL)
+END
+GO
