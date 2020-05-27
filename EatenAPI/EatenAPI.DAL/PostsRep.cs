@@ -163,10 +163,10 @@ namespace EatenAPI.DAL
                         Posts p = new Posts()
                         {
                             PostId = (int)row["PostId"],
-                            AccountId = (int)row["PostId"],
-                            PostName = row["PostId"].ToString(),
-                            Content = row["PostId"].ToString(),
-                            Address = row["PostId"].ToString()
+                            AccountId = (int)row["AccountId"],
+                            PostName = row["PostName"].ToString(),
+                            Content = row["Content"].ToString(),
+                            Address = row["Address"].ToString()
                         };
                         res.Add(p);
                     }
