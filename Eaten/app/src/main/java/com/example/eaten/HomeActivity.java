@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
@@ -31,6 +32,7 @@ public class HomeActivity extends AppCompatActivity {
     GridView gv;
     List<Card> cardList;
     private static final String JSON_URL = "https://eatenapi.azurewebsites.net/api/Posts/get-all-post-info";
+    private Button btnNewPost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,14 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(sub);
             }
         });
+
+//        btnNewPost.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intentNewPost = new Intent(HomeActivity.this, PostActivity.class);
+//                startActivity(intentNewPost);
+//            }
+//        });
     }
 
     private void loadGV(){

@@ -44,5 +44,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+<!--    <Button-->
+<!--        android:id="@+id/btnNewPost"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="40dp"-->
+<!--        android:layout_gravity=""-->
+<!--        android:background="@drawable/bg_auth_btn"-->
+<!--        android:fontFamily="@font/nunito_sans_bold"-->
+<!--        android:text="Bài Viết Mới"-->
+<!--        android:textColor="@color/colorTextORIcon"-->
+<!--        android:textSize="10dp"-->
+<!--        tools:layout_editor_absoluteX="1dp"-->
+<!--        tools:layout_editor_absoluteY="1dp" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
