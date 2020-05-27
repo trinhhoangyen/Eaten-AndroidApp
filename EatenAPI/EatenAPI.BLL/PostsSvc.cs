@@ -86,9 +86,9 @@ namespace EatenAPI.BLL
             var res = _rep.SearchPost(kw);
             return res;
         }
-        public bool AddPost(int AccountId, string PostName, string Content, string Address, string PictureURL)
+        public bool AddPost(PostReq post)
         {
-            bool res = _rep.AddPost(AccountId, PostName, Content, Address, PictureURL);
+            bool res = _rep.AddPost(post);
             return res;
         }
     }
