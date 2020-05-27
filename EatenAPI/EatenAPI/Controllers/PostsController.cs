@@ -43,9 +43,9 @@ namespace EatenAPI.WEB.Controllers
         }
 
         [HttpPost("add-post")]
-        public IActionResult AddPost(int AccountId, string PostName, string Content, string Address, string PictureURL)
+        public IActionResult AddPost([FromBody]PostReq req)
         {
-            var res = _svc.AddPost(AccountId, PostName, Content, Address, PictureURL);
+            var res = _svc.AddPost(req);
             return Ok(res);
         }
 
