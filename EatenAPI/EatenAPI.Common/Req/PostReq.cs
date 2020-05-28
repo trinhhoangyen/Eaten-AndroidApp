@@ -11,5 +11,6 @@ namespace EatenAPI.Common.Req
         public string PostName { get; set; }
         public string Content { get; set; }
         public string Address { get; set; }
+        public string PictureURL { get; set; }
     }
 }

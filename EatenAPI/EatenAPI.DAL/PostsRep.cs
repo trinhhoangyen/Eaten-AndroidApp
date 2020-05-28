@@ -7,6 +7,7 @@ using System.Text;
 namespace EatenAPI.DAL
 {
     using Common.Rsp;
+    using EatenAPI.Common.Req;
     using EatenAPI.DAL.ViewModels;
     using Microsoft.Data.SqlClient;
     using Microsoft.EntityFrameworkCore;
@@ -163,10 +164,10 @@ namespace EatenAPI.DAL
                         Posts p = new Posts()
                         {
                             PostId = (int)row["PostId"],
-                            AccountId = (int)row["PostId"],
-                            PostName = row["PostId"].ToString(),
-                            Content = row["PostId"].ToString(),
-                            Address = row["PostId"].ToString()
+                            AccountId = (int)row["AccountId"],
+                            PostName = row["PostName"].ToString(),
+                            Content = row["Content"].ToString(),
+                            Address = row["Address"].ToString()
                         };
                         res.Add(p);
                     }
@@ -178,7 +179,7 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-        public bool AddPost(int AccountId, string PostName, string Content, string Address, string PictureURL)
+        public bool AddPost(PostReq req)
         {
             var cnn = (SqlConnection)Context.Database.GetDbConnection();
             if (cnn.State == ConnectionState.Closed)
@@ -191,11 +192,11 @@ namespace EatenAPI.DAL
                 DataSet ds = new DataSet();
                 var cmd = cnn.CreateCommand();
                 cmd.CommandText = "AddPost";
-                cmd.Parameters.AddWithValue("@AccountId", AccountId);
-                cmd.Parameters.AddWithValue("@PostName", PostName);
-                cmd.Parameters.AddWithValue("@Content", Content);
-                cmd.Parameters.AddWithValue("@Address", Address);
-                cmd.Parameters.AddWithValue("@PictureURL", PictureURL);
+                cmd.Parameters.AddWithValue("@AccountId", req.AccountId);
+                cmd.Parameters.AddWithValue("@PostName", req.PostName);
+                cmd.Parameters.AddWithValue("@Content", req.Content);
+                cmd.Parameters.AddWithValue("@Address", req.Address);
+                cmd.Parameters.AddWithValue("@PictureURL", req.PictureURL);
                 cmd.CommandType = CommandType.StoredProcedure;
                 da.SelectCommand = cmd; //thuc hien
                 da.Fill(ds);
