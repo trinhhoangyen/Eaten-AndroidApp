@@ -80,5 +80,16 @@ namespace EatenAPI.BLL
             var res = _rep.GetAllPostInfo();
             return res;
         }
+
+        public List<Posts> SearchPost(string kw)
+        {
+            var res = _rep.SearchPost(kw);
+            return res;
+        }
+        public bool AddPost(PostReq post)
+        {
+            bool res = _rep.AddPost(post);
+            return res;
+        }
     }
 }
