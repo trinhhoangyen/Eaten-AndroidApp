@@ -19,13 +19,13 @@ namespace EatenAPI.DAL
         }
         #endregion
 
+        #region
         public int Remove(int id)
         {
             var m = All.First(i => i.CommentId == id);
             m = base.Delete(m);
             return m.CommentId;
         }
-
         public SingleRsp CreateComment(Comments cmt)
         {
             var res = new SingleRsp();
@@ -48,7 +48,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-
         public SingleRsp UpdateComment(Comments cmt)
         {
             var res = new SingleRsp();
@@ -71,7 +70,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-
         public SingleRsp DeleteComment(Comments cmt)
         {
             var res = new SingleRsp();
@@ -94,7 +92,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-
         public IEnumerable<CommentViewModel> GetAllCommentInfo()
         {
             var context = new EatenDatabaseContext();
@@ -115,5 +112,6 @@ namespace EatenAPI.DAL
                       };
             return res;
         }
+        #endregion
     }
 }
