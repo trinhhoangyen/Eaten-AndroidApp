@@ -28,6 +28,7 @@ namespace EatenAPI.DAL
         }
         #endregion
 
+        #region Methods
         public int Remove(int id)
         {
             var m = All.First(i => i.AccountId == id);
@@ -187,5 +188,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
+        #endregion
     }
 }

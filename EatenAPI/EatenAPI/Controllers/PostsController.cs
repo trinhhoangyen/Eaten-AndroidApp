@@ -42,6 +42,13 @@ namespace EatenAPI.WEB.Controllers
             return Ok((object)res);
         }
 
+        [HttpPost("get-detail-post-by-id")]
+        public IActionResult GetDetailPostByID([FromBody] PostReq req)
+        {
+            var res = _svc.GetDetailPostByID(req.PostId);
+            return Ok((object)res);
+        }
+
         [HttpPost("add-post")]
         public IActionResult AddPost([FromBody]PostReq req)
         {
