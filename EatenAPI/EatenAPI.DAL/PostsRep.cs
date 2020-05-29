@@ -24,13 +24,14 @@ namespace EatenAPI.DAL
             return res;
         }
         #endregion
+
+        #region Methods
         public int Remove(int id)
         {
             var m = All.First(i => i.PostId == id);
             m = base.Delete(m);
             return m.PostId;
         }
-
         public SingleRsp CreatePost(Posts post)
         {
             var res = new SingleRsp();
@@ -53,7 +54,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-
         public SingleRsp UpdatePost(Posts post)
         {
             var res = new SingleRsp();
@@ -76,7 +76,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-
         public SingleRsp DeletePost(Posts post)
         {
             var res = new SingleRsp();
@@ -99,7 +98,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-
         public IEnumerable<PostInfoViewModel> GetAllPostInfo()
         {
             var context = new EatenDatabaseContext();
@@ -138,7 +136,6 @@ namespace EatenAPI.DAL
                       };
             return res;
         }
-
         public List<Posts> SearchPost(string kw)
         {
             List<Posts> res = new List<Posts>();
@@ -207,5 +204,6 @@ namespace EatenAPI.DAL
             }
             return true;
         }
+        #endregion
     }
 }

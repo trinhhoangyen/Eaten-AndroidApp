@@ -1,6 +1,28 @@
 ﻿/*
+- 29/5/2020
+*/
+--- Get Posts by AccountID (has list Post of this Account)
+CREATE PROC GetPostsByAccountID ( @AccountID int )
+AS
+BEGIN
+	SELECT * FROM Posts p, Pictures pic
+	WHERE p.AccountID = @AccountID and p.PostID = pic.PostID
+END
+GO
+
+--- Get Info Account by AccountID
+CREATE PROC GetAccountByID ( @AccountID int )
+AS
+BEGIN
+	select * from Accounts
+	where AccountID = @AccountID
+END
+GO
+
+/*
 - 26/5/2020
 */
+--- Search post by keyword with PostName, Address, CategoryName
 CREATE PROC SearchPost ( @kw nvarchar(100) )
 AS
 BEGIN
@@ -16,8 +38,7 @@ BEGIN
 END
 GO
 
-GO
----
+--- Add post with Picture
 CREATE PROC AddPost(@AccountId int,@PostName nvarchar(50),@Content ntext, @Address nvarchar(100), @PictureURL ntext)
 AS
 BEGIN

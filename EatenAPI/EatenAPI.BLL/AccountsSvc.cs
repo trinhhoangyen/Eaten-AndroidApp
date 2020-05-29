@@ -7,12 +7,12 @@ using System.Text;
 
 namespace EatenAPI.BLL
 {
-
     using Common.Req;
     using Common.Rsp;
     using System.Linq;
     public class AccountsSvc : GenericSvc<AccountsRep, Accounts>
     {
+        #region Override
         public override SingleRsp Read(int id)
         {
             var res = new SingleRsp();
@@ -22,7 +22,6 @@ namespace EatenAPI.BLL
 
             return res;
         }
-
         public override SingleRsp Update(Accounts m)
         {
             var res = new SingleRsp();
@@ -36,7 +35,14 @@ namespace EatenAPI.BLL
             }
             return res;
         }
+        #endregion
 
+        #region Methods
+        public InfoAccountReq GetInfoAccountByID(int id)
+        {
+            var res = _rep.GetInfoAccountByID(id);
+            return res;
+        }
         public SingleRsp Login(string email, string password)
         {
             var res = new SingleRsp();
@@ -46,7 +52,6 @@ namespace EatenAPI.BLL
 
             return res;
         }
-
         public SingleRsp CreateAccount(AccountReq acc)
         {
             var res = new SingleRsp();
@@ -62,7 +67,6 @@ namespace EatenAPI.BLL
             res = _rep.CreateAccount(accNew);
             return res;
         }
-
         public SingleRsp UpdateAccount(AccountReq acc)
         {
             var res = new SingleRsp();
@@ -79,7 +83,6 @@ namespace EatenAPI.BLL
             res = _rep.UpdateAccount(accUpdate);
             return res;
         }
-
         public SingleRsp DeleteAccount(int id)
         {
             var res = new SingleRsp();
@@ -87,5 +90,6 @@ namespace EatenAPI.BLL
             res = _rep.DeleteAccount(acc);
             return res;
         }
+        #endregion
     }
 }

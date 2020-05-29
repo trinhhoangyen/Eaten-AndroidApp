@@ -35,10 +35,10 @@ namespace EatenAPI.WEB.Controllers
             return Ok(res);
         }
         [HttpPost("search-post")]
-        public IActionResult SearchPost(string kw)
+        public IActionResult SearchPost([FromBody] SimpleReq req)
         {
             var res = new SingleRsp();
-            res.Data = _svc.SearchPost(kw);
+            res.Data = _svc.SearchPost(req.Keyword);
             return Ok((object)res);
         }
 
