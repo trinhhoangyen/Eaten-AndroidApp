@@ -28,6 +28,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
@@ -118,6 +119,7 @@ public class HomeActivity extends AppCompatActivity {
                                 //Log.e("abc","e e e e e");
                                 cardList.add(card);
                             }
+                            Collections.reverse(cardList);
                             CardAdapter adapter = new CardAdapter(cardList, getApplicationContext());
                             gv.setAdapter(adapter);
                             Log.e("abc","e e e e e");

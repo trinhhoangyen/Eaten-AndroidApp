@@ -27,7 +27,7 @@
     <string name="text_notification">notify</string>
     <string name="text_shortinfo">Post failed, please enter enough information!</string>
     <string name="text_exit">Exit</string>
-    <string name="text_loadimgtrue">successfully!</string>
+    <string name="text_loadimgtrue">Successfully!</string>
     <string name="text_loadimgfalse">Fail!</string>
     <string name="text_signintrue">Success!</string>
     <string name="text_signupfalse">Registration failed!</string>
