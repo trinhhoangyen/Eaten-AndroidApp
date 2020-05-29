@@ -19,6 +19,15 @@ BEGIN
 END
 GO
 
+--- Get detail post by id
+CREATE PROC GetDetailPostByID ( @PostID int )
+AS
+BEGIN
+	SELECT * FROM Posts p, Pictures pic
+	WHERE p.PostID = pic.PostID and p.PostID = @PostID
+END
+GO
+
 /*
 - 26/5/2020
 */
