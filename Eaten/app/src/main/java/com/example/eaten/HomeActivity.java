@@ -3,11 +3,14 @@ package com.example.eaten;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -25,23 +28,32 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
     GridView gv;
     List<Card> cardList;
     private static final String JSON_URL = "https://eatenapi.azurewebsites.net/api/Posts/get-all-post-info";
+    private ImageView btnNewPost;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        //
+        btnNewPost = (ImageView) findViewById(R.id.btnNewPost);
 
-        //nhận accountID từ MainActivity
+        //Nhận accountID từ MainActivity
+//
+//        Intent sub = getIntent();
+//        temp = (int) sub.getIntExtra("accID", -1);
+        //Nhận accountID từ MainActivity
+        SharedPreferences sp = getSharedPreferences("Save_ID_Acc", MODE_PRIVATE);
+        //Đọc dữ liệu
         final int temp;
-        Intent sub = getIntent();
-        temp = (int) sub.getIntExtra("accID", -1);
-
+        temp = sp.getInt("accID", -1); //X là kiểu dữ liệu
 
         mapping();
 
@@ -52,9 +64,18 @@ public class HomeActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Card card_sub = (Card) cardList.get(position);
                 Intent sub = new Intent(view.getContext(), HomeSubActivity.class);
-                sub.putExtra("accID", temp); //chuyển accountId sang HomeSubActivity
-                sub.putExtra("card", position);
+                //sub.putExtra("accID", temp); //chuyển accountId sang HomeSubActivity
+                sub.putExtra("card", cardList.get(position).getPostId());
                 startActivity(sub);
+            }
+        });
+
+        btnNewPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentNewPost = new Intent(HomeActivity.this, PostActivity.class);
+                //intentNewPost.putExtra("accID", temp); //chuyển accountId sang HomeSubActivity
+                startActivity(intentNewPost);
             }
         });
     }
@@ -98,6 +119,7 @@ public class HomeActivity extends AppCompatActivity {
                                 //Log.e("abc","e e e e e");
                                 cardList.add(card);
                             }
+                            Collections.reverse(cardList);
                             CardAdapter adapter = new CardAdapter(cardList, getApplicationContext());
                             gv.setAdapter(adapter);
                             Log.e("abc","e e e e e");

@@ -37,7 +37,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:fontFamily="@font/nunito_sans_reguler"
-        android:text="Đăng ký tài khoản"
+        android:text="@string/text_btn_forgot_password"
         android:textColor="@color/colorTextORIcon"
         android:textSize="20dp"
         app:layout_constraintStart_toStartOf="@+id/tv_auth_title"

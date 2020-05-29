@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Eaten</string>
+    <string name="text_sign_in_subtitle">Brings interesting experiences of life.</string>
+    <string name="text_sign_in_subtitleChild">The reviews article True - Attractive.</string>
+    <string name="text_hint_password_field">Password</string>
+    <string name="hint_password_register">Enter the password</string>
+    <string name="hint_password_register_agian">Enter the password</string>
+    <string name="text_btn_forgot_password">Sign-up</string>
+    <string name="text_btn_sign_in">Sign-in</string>
+    <string name="text_btn_sign_out">Sign-up</string>
+    <string name="text_status">Posts</string>
+    <string name="text_name">Name</string>
+    <string name="text_cmt">Comment</string>
+    <string name="text_addstatus">Posting</string>
+    <string name="text_titlestatus">Post Title</string>
+    <string name="text_contentstatus">Post content</string>
+    <string name="text_address">Address</string>
+    <string name="text_addimg">Add image</string>
+    <string name="text_postname">Post Name</string>
+    <string name="text_dontaddcmt">No comment !</string>
+    <string name="text_dontcmt">Can\'t comment</string>
+    <string name="text_signinfalse">Login failed!</string>
+    <string name="text_addstatustrue">Your article has been uploaded successfully!</string>
+    <string name="text_returnhome">Back to homepage!</string>
+    <string name="text_continue">Continue!</string>
+    <string name="text_notification">notify</string>
+    <string name="text_shortinfo">Post failed, please enter enough information!</string>
+    <string name="text_exit">Exit</string>
+    <string name="text_loadimgtrue">Successfully!</string>
+    <string name="text_loadimgfalse">Fail!</string>
+    <string name="text_signintrue">Success!</string>
+    <string name="text_signupfalse">Registration failed!</string>
+</resources>
