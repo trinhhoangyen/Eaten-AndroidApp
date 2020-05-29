@@ -18,13 +18,13 @@ namespace EatenAPI.DAL
         }
         #endregion
 
+        #region
         public int Remove(int id)
         {
             var m = All.First(i => i.PictureId == id);
             m = base.Delete(m);
             return m.PictureId;
         }
-
         public SingleRsp CreatePicture(Pictures pic)
         {
             var res = new SingleRsp();
@@ -47,7 +47,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-
         public SingleRsp UpdatePicture(Pictures pic)
         {
             var res = new SingleRsp();
@@ -70,7 +69,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-
         public SingleRsp DeletePicture(Pictures pic)
         {
             var res = new SingleRsp();
@@ -93,5 +91,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
+        #endregion
     }
 }

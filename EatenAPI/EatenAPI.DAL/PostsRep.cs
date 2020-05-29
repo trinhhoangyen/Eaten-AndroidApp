@@ -24,13 +24,14 @@ namespace EatenAPI.DAL
             return res;
         }
         #endregion
+
+        #region Methods
         public int Remove(int id)
         {
             var m = All.First(i => i.PostId == id);
             m = base.Delete(m);
             return m.PostId;
         }
-
         public SingleRsp CreatePost(Posts post)
         {
             var res = new SingleRsp();
@@ -53,7 +54,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-
         public SingleRsp UpdatePost(Posts post)
         {
             var res = new SingleRsp();
@@ -76,7 +76,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-
         public SingleRsp DeletePost(Posts post)
         {
             var res = new SingleRsp();
@@ -99,7 +98,6 @@ namespace EatenAPI.DAL
             }
             return res;
         }
-
         public IEnumerable<PostInfoViewModel> GetAllPostInfo()
         {
             var context = new EatenDatabaseContext();
@@ -138,10 +136,9 @@ namespace EatenAPI.DAL
                       };
             return res;
         }
-
-        public List<Posts> SearchPost(string kw)
+        public List<PostReq> SearchPost(string kw)
         {
-            List<Posts> res = new List<Posts>();
+            List<PostReq> res = new List<PostReq>();
             var cnn = (SqlConnection)Context.Database.GetDbConnection();
             if (cnn.State == ConnectionState.Closed)
             {
@@ -161,15 +158,57 @@ namespace EatenAPI.DAL
                 {
                     foreach (DataRow row in ds.Tables[0].Rows)
                     {
-                        Posts p = new Posts()
+                        PostReq p = new PostReq()
                         {
                             PostId = (int)row["PostId"],
                             AccountId = (int)row["AccountId"],
                             PostName = row["PostName"].ToString(),
                             Content = row["Content"].ToString(),
-                            Address = row["Address"].ToString()
+                            Address = row["Address"].ToString(),
+                            PictureURL = row["PictureURL"].ToString()
                         };
                         res.Add(p);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                res = null;
+            }
+            return res;
+        }
+        public PostReq GetDetailPostByID(int id)
+        {
+            PostReq res = new PostReq();
+            var cnn = (SqlConnection)Context.Database.GetDbConnection();
+            if (cnn.State == ConnectionState.Closed)
+            {
+                cnn.Open();
+            }
+            try
+            {
+                SqlDataAdapter da = new SqlDataAdapter();
+                DataSet ds = new DataSet();
+                var cmd = cnn.CreateCommand();
+                cmd.CommandText = "GetDetailPostByID";
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@PostID", id);
+                da.SelectCommand = cmd;
+                da.Fill(ds);
+                if (ds.Tables.Count > 0 && ds.Tables[0].Rows.Count > 0)
+                {
+                    foreach (DataRow row in ds.Tables[0].Rows)
+                    {
+                        PostReq p = new PostReq()
+                        {
+                            PostId = (int)row["PostId"],
+                            AccountId = (int)row["AccountId"],
+                            PostName = row["PostName"].ToString(),
+                            Content = row["Content"].ToString(),
+                            Address = row["Address"].ToString(),
+                            PictureURL = row["PictureURL"].ToString()
+                        };
+                        res = p;
                     }
                 }
             }
@@ -207,5 +246,6 @@ namespace EatenAPI.DAL
             }
             return true;
         }
+        #endregion
     }
 }

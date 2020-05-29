@@ -156,7 +156,6 @@ values (1, N'Belgo Belgian Craft Beer Brewery - Lê Ngô Cát',
 			N'Dessert rất ngon, ăn là ghiền. Mình đến đây chỉ để thưởng thức dessert',
 			N'277 - 279 Phan Xích Long, P. 2, Quận Phú Nhuận, TP. HCM')
 
-			-- delete Pictures
 INSERT Pictures
 values (1, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/foody-upload-api-foody-mobile-6-jpg-181115113413.jpg?alt=media&token=493aec28-38e7-4851-9586-14b517b0919b'),
 		(2, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/unnamed.jpg?alt=media&token=0002b199-25b5-4803-809a-a93454dc7954&fbclid=IwAR0E_24lbieVQGOg7kTW1Y7PBnnSt6gAHa3b2s9RSiLnSI35mKEXcjM74q4'),
@@ -178,7 +177,6 @@ values (1, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/
 		(18, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/highland-coffee-nha-trang-2.jpg?alt=media&token=8875dde2-7a1d-45d3-a438-48e9066d33c1&fbclid=IwAR2oyRaUhk1JSQgS8V3za51Wb2wxQ74bRcrAACs7ll605oUMS-LUB2oSHMQ'),
 		(19, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/highland-coffee-nha-trang-2.jpg?alt=media&token=8875dde2-7a1d-45d3-a438-48e9066d33c1&fbclid=IwAR2oyRaUhk1JSQgS8V3za51Wb2wxQ74bRcrAACs7ll605oUMS-LUB2oSHMQ'),
 		(20, 'https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/highland-coffee-nha-trang-2.jpg?alt=media&token=8875dde2-7a1d-45d3-a438-48e9066d33c1&fbclid=IwAR2oyRaUhk1JSQgS8V3za51Wb2wxQ74bRcrAACs7ll605oUMS-LUB2oSHMQ')
-
 
 INSERT Comments
 values (1, 2, N'Mình cũng rất thích quán này', 0, null),
@@ -248,5 +246,10 @@ values (1, 2), (1, 6), (1, 7),
 		(19, 10), (19, 12),
 		(20, 10), (20, 7), (20, 9)
 
+-- delete Pictures -- DBCC CHECKIDENT ('Pictures', RESEED, 0)
+-- delete Comments -- DBCC CHECKIDENT ('Comments', RESEED, 0)
 -- DELETE Post_FoodCategory
--- delete Comments
+-- delete posts -- DBCC CHECKIDENT ('posts', RESEED, 0)
+-- delete FoodCategories -- DBCC CHECKIDENT ('FoodCategories', RESEED, 0)
+-- delete accounts -- DBCC CHECKIDENT ('accounts', RESEED, 0)
+
