@@ -36,7 +36,7 @@ public class AccInfoActivity extends AppCompatActivity {
     ListView lv;
     List<Card> cardList;
     ImageView acc_info;
-    TextView displayname_info, email_info, gender_info;
+    TextView displayname_info, email_info, gender_info, year_info;
     int temp;
 
     private static final String JSON_URL = "https://eatenapi.azurewebsites.net/api/Posts/get-all-post-info";
@@ -94,7 +94,8 @@ public class AccInfoActivity extends AppCompatActivity {
                                             .into(acc_info);
                                     displayname_info.setText(account.getDisplayName());
                                     email_info.setText(account.getEmail());
-                                    gender_info.setText(account.getGender());
+                                    gender_info.append(account.getGender());
+                                    year_info.append(String.valueOf(account.getYearOfBirth()));
                                 }
                             }
                         }catch (JSONException e){
@@ -172,6 +173,7 @@ public class AccInfoActivity extends AppCompatActivity {
         displayname_info = (TextView) findViewById(R.id.id_displayname_info);
         email_info = (TextView) findViewById(R.id.id_email_info);
         gender_info = (TextView) findViewById(R.id.id_gender_info);
+        year_info = (TextView) findViewById(R.id.id_year_info);
         lv = (ListView) findViewById(R.id.id_list_status_info);
     }
 }
