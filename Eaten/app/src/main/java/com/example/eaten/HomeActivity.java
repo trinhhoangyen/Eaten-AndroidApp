@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
@@ -32,13 +33,20 @@ public class HomeActivity extends AppCompatActivity {
     GridView gv;
     List<Card> cardList;
     private static final String JSON_URL = "https://eatenapi.azurewebsites.net/api/Posts/get-all-post-info";
-    private Button btnNewPost;
+    private ImageView btnNewPost;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         //
+        btnNewPost = (ImageView) findViewById(R.id.btnNewPost);
+
+        //Nhận accountID từ MainActivity
+        final int temp;
+        Intent sub = getIntent();
+        temp = (int) sub.getIntExtra("accID", -1);
+
         mapping();
 
         loadGV();
@@ -48,18 +56,20 @@ public class HomeActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Card card_sub = (Card) cardList.get(position);
                 Intent sub = new Intent(view.getContext(), HomeSubActivity.class);
+                sub.putExtra("accID", temp); //chuyển accountId sang HomeSubActivity
                 sub.putExtra("card", position);
                 startActivity(sub);
             }
         });
 
-//        btnNewPost.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intentNewPost = new Intent(HomeActivity.this, PostActivity.class);
-//                startActivity(intentNewPost);
-//            }
-//        });
+        btnNewPost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentNewPost = new Intent(HomeActivity.this, PostActivity.class);
+                intentNewPost.putExtra("accID", temp); //chuyển accountId sang HomeSubActivity
+                startActivity(intentNewPost);
+            }
+        });
     }
 
     private void loadGV(){

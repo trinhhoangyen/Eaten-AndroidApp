@@ -23,15 +23,11 @@
         android:verticalSpacing="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-    </GridView>
-    <!--    <ListView-->
-    <!--        android:id="@+id/gridView0"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        />-->
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
@@ -44,18 +40,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<!--    <Button-->
-<!--        android:id="@+id/btnNewPost"-->
-<!--        android:layout_width="100dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:layout_gravity=""-->
-<!--        android:background="@drawable/bg_auth_btn"-->
-<!--        android:fontFamily="@font/nunito_sans_bold"-->
-<!--        android:text="Bài Viết Mới"-->
-<!--        android:textColor="@color/colorTextORIcon"-->
-<!--        android:textSize="10dp"-->
-<!--        tools:layout_editor_absoluteX="1dp"-->
-<!--        tools:layout_editor_absoluteY="1dp" />-->
+    <ImageView
+        android:id="@+id/btnNewPost"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/add" />
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnNewPost"-->
+    <!--        android:layout_width="100dp"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:layout_gravity=""-->
+    <!--        android:background="@drawable/bg_auth_btn"-->
+    <!--        android:fontFamily="@font/nunito_sans_bold"-->
+    <!--        android:text="Bài Viết Mới"-->
+    <!--        android:textColor="@color/colorTextORIcon"-->
+    <!--        android:textSize="10dp"-->
+    <!--        tools:layout_editor_absoluteX="1dp"-->
+    <!--        tools:layout_editor_absoluteY="1dp" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

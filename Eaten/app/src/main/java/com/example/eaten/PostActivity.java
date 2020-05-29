@@ -63,6 +63,10 @@ public class PostActivity extends AppCompatActivity {
         edtAddress = (EditText) findViewById(R.id.edtAddress);
         imgPicture = (ImageView) findViewById(R.id.imgPicture);
         imgNewPost = (ImageView) findViewById(R.id.imgNewPost);
+        //Nhận dữ liệu accountId từ HomeActivity
+        final int accountID;
+        Intent home = getIntent();
+        accountID = (int) home.getIntExtra("accID", -1);
         //Sử dụng Firebase
         mStorageRef = FirebaseStorage.getInstance().getReference();
         storage = FirebaseStorage.getInstance(mStorageRef.toString());
@@ -79,20 +83,20 @@ public class PostActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!edtPostName.getText().toString().equals("") && !edtContent.getText().toString().equals("") && !edtAddress.getText().toString().equals("")) {
                     String data = String.format("{\n" +
-                            "  \"accountId\": 1,\n" +
+                            "  \"accountId\": %d,\n" +
                             "  \"postName\": \"%s\",\n" +
                             "  \"content\": \"%s\",\n" +
                             "  \"address\": \"%s\",\n" +
                             "  \"pictureURL\": \"%s\"\n" +
-                            "}", edtPostName.getText().toString(), edtContent.getText().toString(), edtAddress.getText().toString(), imageURL);
+                            "}", accountID, edtPostName.getText().toString(), edtContent.getText().toString(), edtAddress.getText().toString(), imageURL);
                     Submit(data);
                     //Thông báo đăng ký thành công
                     AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
                     builder.setMessage("\nBài viết của bạn đã tải lên thành công!").setCancelable(false).setNegativeButton("Trở về trang chủ", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
-                            Intent intentMain = new Intent(((Dialog)dialog).getContext(), MainActivity.class);
-                            startActivity(intentMain);
+                            Intent intentHome = new Intent(((Dialog)dialog).getContext(), HomeActivity.class);
+                            startActivity(intentHome);
                         }
                     }).setPositiveButton("Tiếp tục", new DialogInterface.OnClickListener() {
                         @Override
