@@ -12,6 +12,7 @@ namespace EatenAPI.BLL
     using System.Linq;
     public class FoodCategoriesSvc : GenericSvc<FoodCategoriesRep, FoodCategories>
     {
+        #region Override
         public override SingleRsp Read(int id)
         {
             var res = new SingleRsp();
@@ -21,7 +22,6 @@ namespace EatenAPI.BLL
 
             return res;
         }
-
         public override SingleRsp Update(FoodCategories m)
         {
             var res = new SingleRsp();
@@ -35,7 +35,9 @@ namespace EatenAPI.BLL
             }
             return res;
         }
+        #endregion
 
+        #region Methods
         public SingleRsp CreateFoodCategory(FoodCategoryReq cate)
         {
             var res = new SingleRsp();
@@ -47,7 +49,6 @@ namespace EatenAPI.BLL
             res = _rep.CreateFoodCategory(cateNew);
             return res;
         }
-
         public SingleRsp UpdateFoodCategory(FoodCategoryReq cate)
         {
             var res = new SingleRsp();
@@ -58,7 +59,6 @@ namespace EatenAPI.BLL
             res = _rep.UpdateFoodCategory(cateUpdate);
             return res;
         }
-
         public SingleRsp DeleteFoodCategory(int id)
         {
             var res = new SingleRsp();
@@ -66,5 +66,6 @@ namespace EatenAPI.BLL
             res = _rep.DeleteFoodCategory(cate);
             return res;
         }
+        #endregion
     }
 }
