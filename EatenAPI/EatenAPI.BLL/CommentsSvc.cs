@@ -14,6 +14,7 @@ namespace EatenAPI.BLL
     using System.Linq;
     public class CommentsSvc : GenericSvc<CommentsRep, Comments>
     {
+        #region Override
         public override SingleRsp Read(int id)
         {
             var res = new SingleRsp();
@@ -23,7 +24,6 @@ namespace EatenAPI.BLL
 
             return res;
         }
-
         public override SingleRsp Update(Comments m)
         {
             var res = new SingleRsp();
@@ -37,7 +37,9 @@ namespace EatenAPI.BLL
             }
             return res;
         }
+        #endregion
 
+        #region Methods
         public SingleRsp CreateComment(CommentReq cmt)
         {
             var res = new SingleRsp();
@@ -52,7 +54,6 @@ namespace EatenAPI.BLL
             res = _rep.CreateComment(cmtNew);
             return res;
         }
-
         public SingleRsp UpdateComment(CommentReq cmt)
         {
             var res = new SingleRsp();
@@ -68,7 +69,6 @@ namespace EatenAPI.BLL
             res = _rep.UpdateComment(cmtUpdate);
             return res;
         }
-
         public SingleRsp DeleteComment(int id)
         {
             var res = new SingleRsp();
@@ -76,11 +76,11 @@ namespace EatenAPI.BLL
             res = _rep.DeleteComment(cmt);
             return res;
         }
-
         public IEnumerable<CommentViewModel> GetAllCommentInfo()
         {
             var res = _rep.GetAllCommentInfo();
             return res;
         }
+        #endregion
     }
 }

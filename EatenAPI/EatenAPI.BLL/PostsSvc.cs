@@ -7,13 +7,13 @@ using System.Text;
 
 namespace EatenAPI.BLL
 {
-
     using Common.Req;
     using Common.Rsp;
     using EatenAPI.DAL.ViewModels;
     using System.Linq;
     public class PostsSvc : GenericSvc<PostsRep, Posts>
     {
+        #region Override
         public override SingleRsp Read(int id)
         {
             var res = new SingleRsp();
@@ -23,7 +23,6 @@ namespace EatenAPI.BLL
 
             return res;
         }
-
         public override SingleRsp Update(Posts m)
         {
             var res = new SingleRsp();
@@ -37,7 +36,9 @@ namespace EatenAPI.BLL
             }
             return res;
         }
-
+        #endregion
+     
+        #region Methods
         public SingleRsp CreatePost(PostReq post)
         {
             var res = new SingleRsp();
@@ -51,7 +52,6 @@ namespace EatenAPI.BLL
             res = _rep.CreatePost(postNew);
             return res;
         }
-
         public SingleRsp UpdatePost(PostReq post)
         {
             var res = new SingleRsp();
@@ -66,7 +66,6 @@ namespace EatenAPI.BLL
             res = _rep.UpdatePost(postUpdate);
             return res;
         }
-
         public SingleRsp DeletePost(int id)
         {
             var res = new SingleRsp();
@@ -74,16 +73,19 @@ namespace EatenAPI.BLL
             res = _rep.DeletePost(acc);
             return res;
         }
-
         public IEnumerable<PostInfoViewModel> GetAllPostInfo()
         {
             var res = _rep.GetAllPostInfo();
             return res;
         }
-
-        public List<Posts> SearchPost(string kw)
+        public List<PostReq> SearchPost(string kw)
         {
             var res = _rep.SearchPost(kw);
+            return res;
+        }
+        public PostReq GetDetailPostByID(int id)
+        {
+            var res = _rep.GetDetailPostByID(id);
             return res;
         }
         public bool AddPost(PostReq post)
@@ -91,5 +93,6 @@ namespace EatenAPI.BLL
             bool res = _rep.AddPost(post);
             return res;
         }
+        #endregion
     }
 }
