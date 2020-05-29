@@ -27,6 +27,13 @@ namespace EatenAPI.WEB.Controllers
             return Ok(res);
         }
 
+        [HttpPost("get-info-account-by-id")]
+        public IActionResult GetInfoAccountByID([FromBody]InfoAccountReq req)
+        {
+            var res = _svc.GetInfoAccountByID(req.AccountId);
+            return Ok(res);
+        }
+
         [HttpPost("get-account-login")]
         public IActionResult getAccountLogin([FromBody]AccountReq req)
         {

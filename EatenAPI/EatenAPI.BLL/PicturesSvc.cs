@@ -7,12 +7,12 @@ using System.Text;
 
 namespace EatenAPI.BLL
 {
-
     using Common.Req;
     using Common.Rsp;
     using System.Linq;
     public class PicturesSvc : GenericSvc<PicturesRep, Pictures>
     {
+        #region Override
         public override SingleRsp Read(int id)
         {
             var res = new SingleRsp();
@@ -22,7 +22,6 @@ namespace EatenAPI.BLL
 
             return res;
         }
-
         public override SingleRsp Update(Pictures m)
         {
             var res = new SingleRsp();
@@ -36,7 +35,9 @@ namespace EatenAPI.BLL
             }
             return res;
         }
+        #endregion
 
+        #region Methods
         public SingleRsp CreatePicture(PictureReq pic)
         {
             var res = new SingleRsp();
@@ -47,8 +48,7 @@ namespace EatenAPI.BLL
             };
             res = _rep.CreatePicture(picNew);
             return res;
-        }
-
+        } 
         public SingleRsp UpdatePicture(PictureReq pic)
         {
             var res = new SingleRsp();
@@ -61,7 +61,6 @@ namespace EatenAPI.BLL
             res = _rep.UpdatePicture(picUpdate);
             return res;
         }
-
         public SingleRsp DeletePicture(int id)
         {
             var res = new SingleRsp();
@@ -69,5 +68,6 @@ namespace EatenAPI.BLL
             res = _rep.DeletePicture(acc);
             return res;
         }
+        #endregion
     }
 }
