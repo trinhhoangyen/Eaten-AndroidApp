@@ -21,7 +21,7 @@ public class HomeSubCmtAdapter extends ArrayAdapter<HomeSubCmt> {
     private List<HomeSubCmt> homeSubCmtList;
 
     public HomeSubCmtAdapter(List<HomeSubCmt> homeSubCmtList, Context context){
-        super(context, R.layout.dong_imgfood, homeSubCmtList);
+        super(context, R.layout.row_cmt, homeSubCmtList);
         this.homeSubCmtList = homeSubCmtList;
         this.context = context;
     }

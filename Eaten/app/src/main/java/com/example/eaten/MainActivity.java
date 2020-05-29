@@ -86,6 +86,7 @@ public class MainActivity extends AppCompatActivity {
                     if (account.getEmail().equals(emailValue) && account.getPassword().equals(passwordValue)){
                         //Toast.makeText(getApplicationContext(), "Đăng nhập thành công!", Toast.LENGTH_LONG).show();
                         Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
+                        intentHome.putExtra("accID", account.getAccountId()); //chuyển accountId sang HomeActivity
                         startActivity(intentHome);
                     }
                     else

@@ -38,7 +38,13 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        //
+
+        //nhận accountID từ MainActivity
+        final int temp;
+        Intent sub = getIntent();
+        temp = (int) sub.getIntExtra("accID", -1);
+
+
         mapping();
 
         loadGV();
@@ -48,6 +54,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Card card_sub = (Card) cardList.get(position);
                 Intent sub = new Intent(view.getContext(), HomeSubActivity.class);
+                sub.putExtra("accID", temp); //chuyển accountId sang HomeSubActivity
                 sub.putExtra("card", position);
                 startActivity(sub);
             }
