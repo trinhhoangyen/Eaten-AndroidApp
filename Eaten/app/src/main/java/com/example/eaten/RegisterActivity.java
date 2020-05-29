@@ -60,38 +60,38 @@ public class RegisterActivity extends AppCompatActivity {
                     Submit(data);
                     //Thông báo đăng ký thành công
                     AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                    builder.setMessage("\nĐăng ký thành công!").setCancelable(false).setNegativeButton("Trở về trang chủ", new DialogInterface.OnClickListener() {
+                    builder.setMessage("\n" + R.string.text_signintrue).setCancelable(false).setNegativeButton(R.string.text_returnhome, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             Intent intentMain = new Intent(((Dialog)dialog).getContext(), MainActivity.class);
                             startActivity(intentMain);
                         }
-                    }).setPositiveButton("Tiếp tục", new DialogInterface.OnClickListener() {
+                    }).setPositiveButton(R.string.text_continue, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
                         }
                     });
                     AlertDialog alertDialog = builder.create();
-                    alertDialog.setTitle("Thông báo");
+                    alertDialog.setTitle(R.string.text_notification);
                     alertDialog.show();
                 }
                 else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                    builder.setMessage("\nĐăng ký thất bại!").setCancelable(false).setNegativeButton("Thoát", new DialogInterface.OnClickListener() {
+                    builder.setMessage("\n" + R.string.text_signupfalse).setCancelable(false).setNegativeButton(R.string.text_exit, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             Intent intentMain = new Intent(((Dialog)dialog).getContext(), MainActivity.class);
                             startActivity(intentMain);
                         }
-                        }).setPositiveButton("Tiếp tục", new DialogInterface.OnClickListener() {
+                        }).setPositiveButton(R.string.text_continue, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 dialog.cancel();
                             }
                         });
                     AlertDialog alertDialog = builder.create();
-                    alertDialog.setTitle("Thông báo");
+                    alertDialog.setTitle(R.string.text_notification);
                     alertDialog.show();
                 }
             }
@@ -112,7 +112,7 @@ public class RegisterActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), "Đăng ký thất bại!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.text_signupfalse, Toast.LENGTH_LONG).show();
             }
         }) {
             @Override

@@ -2,11 +2,9 @@ package com.example.eaten;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -63,7 +61,10 @@ public class HomeSubActivity extends AppCompatActivity {
 
         Intent sub = getIntent();
         temp = (int) sub.getIntExtra("card", -1);
-        accID = (int) sub.getIntExtra("accID", -1);
+        //Nhận accountID từ MainActivity
+        SharedPreferences sp = getSharedPreferences("Save_ID_Acc", MODE_PRIVATE);
+        //Đọc dữ liệu
+        accID = sp.getInt("accID", -1); //X là kiểu dữ liệu
 
         load();
         loadacc();
@@ -85,8 +86,9 @@ public class HomeSubActivity extends AppCompatActivity {
                             JSONArray cardArray = jsonObject.getJSONArray("data");
                             //Log.e("abc","e e e e e");
                             for(int i = 0 ; i < cardArray.length(); i++) {
-                                if (temp != -1 && i == temp) {
-                                    JSONObject obj = cardArray.getJSONObject(i);
+                                JSONObject obj = cardArray.getJSONObject(i);
+                                if (temp != -1 && obj.getInt("postId") == temp) {
+
                                     //Log.e("abc","e e e e e");
                                     Card card = new Card(
                                             obj.getInt("postId"),
@@ -139,6 +141,7 @@ public class HomeSubActivity extends AppCompatActivity {
 
     private void loadCmt(){
         homeSubCmtList = new ArrayList<>();
+        homeSubCmtList.clear();
         //final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
         //progressBar.setVisibility(View.VISIBLE);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, JSON_URLCMT,
@@ -153,7 +156,7 @@ public class HomeSubActivity extends AppCompatActivity {
                             //Log.e("abc","e e e e e");
                             for(int i = 0 ; i < homeSubCmtArray.length(); i++){
                                 JSONObject obj = homeSubCmtArray.getJSONObject(i);
-                                if (temp != -1 && obj.getInt("postId") == (temp+1)) {
+                                if (temp != -1 && obj.getInt("postId") == temp) {
                                     HomeSubCmt homeSubCmt = new HomeSubCmt(
                                             obj.getInt("postId"),
                                             obj.getInt("accountId"),
@@ -167,6 +170,7 @@ public class HomeSubActivity extends AppCompatActivity {
                             }
                             Collections.reverse(homeSubCmtList);
                             HomeSubCmtAdapter adapter = new HomeSubCmtAdapter(homeSubCmtList, getApplicationContext());
+                            adapter.notifyDataSetChanged();
                             lv_List_cmt.setAdapter(adapter);
                             //sét độ dài của listview theo độ số lượng cmt
                             ListAdapter listAdapter = lv_List_cmt.getAdapter();
@@ -182,7 +186,6 @@ public class HomeSubActivity extends AppCompatActivity {
                                 lv_List_cmt.setLayoutParams(params);
                                 lv_List_cmt.requestLayout();
                             }
-                            Log.e("abc","e e e e e");
                         }catch (JSONException e){
                             e.printStackTrace();
                             //Log.e("abc","e e e e e");
@@ -226,6 +229,7 @@ public class HomeSubActivity extends AppCompatActivity {
                                     txt_name_acc_nocmt.setText(obj.getString("displayName"));
                                 }
                             }
+                            closeKeyboard();
                         }catch (JSONException e){
                             e.printStackTrace();
                             Toast.makeText(getApplicationContext(), e.getMessage(), Toast.LENGTH_SHORT).show();
@@ -268,19 +272,19 @@ public class HomeSubActivity extends AppCompatActivity {
                                 "  \"content\": \"%s\",\n" +
                                 "  \"react\": 0,\n" +
                                 "  \"rate\": 0\n" +
-                                "}", temp+1, accID, content_nocmt.getText().toString());
+                                "}", temp, accID, content_nocmt.getText().toString());
                         Submit(data);
                     }
                     else {
-                        Toast.makeText(HomeSubActivity.this, "Không nhập bình luận!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(HomeSubActivity.this, R.string.text_dontaddcmt, Toast.LENGTH_SHORT).show();
                     }
                     closeKeyboard();
                     loadCmt();
+                    content_nocmt.setText("");
                     break;
                 default:
                     break;
             }
-
             return false;
         }
     };
@@ -298,7 +302,7 @@ public class HomeSubActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), "Không thể bình luận!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.text_dontcmt, Toast.LENGTH_LONG).show();
             }
         }) {
             @Override

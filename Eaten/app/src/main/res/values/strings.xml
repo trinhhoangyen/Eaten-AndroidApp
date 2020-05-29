@@ -1,14 +1,36 @@
 <resources>
     <string name="app_name">Eaten</string>
-    <string name="text_sign_in">Eaten</string>
+    <string name="text_sign_in" translatable="false">Eaten</string>
     <string name="text_sign_in_subtitle">Mang đến những trải nghiệm thú vị của cuộc sống.</string>
     <string name="text_sign_in_subtitleChild">Những bài review Chân Thật - Lôi Cuốn.</string>
-    <string name="text_hint_email_field">Email</string>
+    <string name="text_hint_email_field" translatable="false">Email</string>
     <string name="text_hint_password_field">Mật Khẩu</string>
     <string name="hint_password_register">Nhập mật khẩu</string>
     <string name="hint_password_register_agian">Nhập lại mật khẩu</string>
     <string name="text_btn_forgot_password">Đăng ký tài khoản</string>
     <string name="text_btn_sign_in">Đăng Nhập</string>
     <string name="text_btn_sign_out">Đăng Ký</string>
-    <string name="text_not_have_an_account"><b>Eaten App © 2020</b></string>
+    <string name="text_not_have_an_account" translatable="false"><b>Eaten App © 2020</b></string>
+    <string name="text_status">Bài viết</string>
+    <string name="text_name">Tên</string>
+    <string name="text_cmt">Bình luận</string>
+    <string name="text_addstatus">Đăng bài</string>
+    <string name="text_titlestatus">Tiêu đề bài viết...</string>
+    <string name="text_contentstatus">Nội dung bài viết...</string>
+    <string name="text_address">Địa chỉ</string>
+    <string name="text_addimg">Thêm hình</string>
+    <string name="text_postname">Tên bài viết</string>
+    <string name="text_dontaddcmt">Không nhập bình luận!</string>
+    <string name="text_dontcmt">Không thể bình luận!</string>
+    <string name="text_signinfalse">Đăng nhập thất bại!</string>
+    <string name="text_addstatustrue">Bài viết của bạn đã tải lên thành công!</string>
+    <string name="text_returnhome">Trở về trang chủ!</string>
+    <string name="text_continue">Tiếp tục!</string>
+    <string name="text_notification">Thông báo</string>
+    <string name="text_shortinfo">Đăng bài thất bại, bạn vui lòng nhâp đủ thông tin!</string>
+    <string name="text_exit">Thoát</string>
+    <string name="text_loadimgtrue">Tải ảnh lên thành công!</string>
+    <string name="text_loadimgfalse">Thêm ảnh thất bại!</string>
+    <string name="text_signintrue">Đăng Ký thành công!</string>
+    <string name="text_signupfalse">Đăng ký thất bại!</string>
 </resources>
