@@ -4951,23 +4951,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\HP\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\myway\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj",
+      "projectUniqueName": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj",
       "projectName": "EatenAPI.Common",
-      "projectPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj",
-      "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\obj\\",
+      "projectPath": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj",
+      "packagesPath": "C:\\Users\\myway\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\myway\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

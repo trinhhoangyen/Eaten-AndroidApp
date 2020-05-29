@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\EatenAPI.BLL.csproj": {}
+    "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\EatenAPI.BLL.csproj": {}
   },
   "projects": {
-    "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\EatenAPI.BLL.csproj": {
+    "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\EatenAPI.BLL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\EatenAPI.BLL.csproj",
+        "projectUniqueName": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\EatenAPI.BLL.csproj",
         "projectName": "EatenAPI.BLL",
-        "projectPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\EatenAPI.BLL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\obj\\",
+        "projectPath": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\EatenAPI.BLL.csproj",
+        "packagesPath": "C:\\Users\\myway\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\myway\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,11 +27,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj": {
-                "projectPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj"
+              "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj": {
+                "projectPath": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj"
               },
-              "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj": {
-                "projectPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj"
+              "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj": {
+                "projectPath": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj"
               }
             }
           }
@@ -82,20 +79,17 @@
         }
       }
     },
-    "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj": {
+    "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj",
+        "projectUniqueName": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj",
         "projectName": "EatenAPI.Common",
-        "projectPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\obj\\",
+        "projectPath": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj",
+        "packagesPath": "C:\\Users\\myway\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\myway\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -153,20 +147,17 @@
         }
       }
     },
-    "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj": {
+    "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj",
         "projectName": "EatenAPI.DAL",
-        "projectPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\obj\\",
+        "projectPath": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj",
+        "packagesPath": "C:\\Users\\myway\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\myway\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -179,8 +170,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj": {
-                "projectPath": "D:\\HKII-2020\\LTDD\\BTL\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj"
+              "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj": {
+                "projectPath": "C:\\Users\\myway\\OneDrive\\Máy tính\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj"
               }
             }
           }
