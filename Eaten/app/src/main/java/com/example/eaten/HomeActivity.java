@@ -3,6 +3,7 @@ package com.example.eaten;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -35,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
     private static final String JSON_URL = "https://eatenapi.azurewebsites.net/api/Posts/get-all-post-info";
     private ImageView btnNewPost;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,9 +45,14 @@ public class HomeActivity extends AppCompatActivity {
         btnNewPost = (ImageView) findViewById(R.id.btnNewPost);
 
         //Nhận accountID từ MainActivity
+//
+//        Intent sub = getIntent();
+//        temp = (int) sub.getIntExtra("accID", -1);
+        //Nhận accountID từ MainActivity
+        SharedPreferences sp = getSharedPreferences("Save_ID_Acc", MODE_PRIVATE);
+        //Đọc dữ liệu
         final int temp;
-        Intent sub = getIntent();
-        temp = (int) sub.getIntExtra("accID", -1);
+        temp = sp.getInt("accID", -1); //X là kiểu dữ liệu
 
         mapping();
 
@@ -56,7 +63,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Card card_sub = (Card) cardList.get(position);
                 Intent sub = new Intent(view.getContext(), HomeSubActivity.class);
-                sub.putExtra("accID", temp); //chuyển accountId sang HomeSubActivity
+                //sub.putExtra("accID", temp); //chuyển accountId sang HomeSubActivity
                 sub.putExtra("card", position);
                 startActivity(sub);
             }
@@ -66,7 +73,7 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intentNewPost = new Intent(HomeActivity.this, PostActivity.class);
-                intentNewPost.putExtra("accID", temp); //chuyển accountId sang HomeSubActivity
+                //intentNewPost.putExtra("accID", temp); //chuyển accountId sang HomeSubActivity
                 startActivity(intentNewPost);
             }
         });

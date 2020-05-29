@@ -3,6 +3,7 @@ package com.example.eaten;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -85,8 +86,18 @@ public class MainActivity extends AppCompatActivity {
                     Account account = new Account(Integer.parseInt(objResult.getString("accountId")), Integer.parseInt(objResult.getString("yearOfBirth")), objResult.getString("email"), objResult.getString("password").trim(), objResult.getString("displayName"), objResult.getString("avatarURL"), objResult.getString("gender"));
                     if (account.getEmail().equals(emailValue) && account.getPassword().equals(passwordValue)){
                         //Toast.makeText(getApplicationContext(), "Đăng nhập thành công!", Toast.LENGTH_LONG).show();
+
+                        //lưu ID của account
+                        SharedPreferences sp = getSharedPreferences("Save_ID_Acc", MODE_PRIVATE);
+                        SharedPreferences.Editor editor = sp.edit();
+                        editor.clear();
+                        //Lưu dữ liệu
+                        editor.putInt("accID", account.getAccountId());
+                        //Hoàn thành
+                        editor.commit();
+
                         Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
-                        intentHome.putExtra("accID", account.getAccountId()); //chuyển accountId sang HomeActivity
+                        //intentHome.putExtra("accID", account.getAccountId()); //chuyển accountId sang HomeActivity
                         startActivity(intentHome);
                     }
                     else

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.KeyEvent;
@@ -60,7 +61,10 @@ public class HomeSubActivity extends AppCompatActivity {
 
         Intent sub = getIntent();
         temp = (int) sub.getIntExtra("card", -1);
-        accID = (int) sub.getIntExtra("accID", -1);
+        //Nhận accountID từ MainActivity
+        SharedPreferences sp = getSharedPreferences("Save_ID_Acc", MODE_PRIVATE);
+        //Đọc dữ liệu
+        accID = sp.getInt("accID", -1); //X là kiểu dữ liệu
 
         load();
         loadacc();

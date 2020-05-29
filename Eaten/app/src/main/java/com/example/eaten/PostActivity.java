@@ -9,6 +9,7 @@ import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
@@ -65,8 +66,12 @@ public class PostActivity extends AppCompatActivity {
         imgNewPost = (ImageView) findViewById(R.id.imgNewPost);
         //Nhận dữ liệu accountId từ HomeActivity
         final int accountID;
-        Intent home = getIntent();
-        accountID = (int) home.getIntExtra("accID", -1);
+        //Intent home = getIntent();
+
+        SharedPreferences sp = getSharedPreferences("Save_ID_Acc", MODE_PRIVATE);
+        //Đọc dữ liệu
+        accountID = sp.getInt("accID", -1); //X là kiểu dữ liệu
+
         //Sử dụng Firebase
         mStorageRef = FirebaseStorage.getInstance().getReference();
         storage = FirebaseStorage.getInstance(mStorageRef.toString());
