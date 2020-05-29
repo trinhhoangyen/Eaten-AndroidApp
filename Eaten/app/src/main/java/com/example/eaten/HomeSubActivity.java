@@ -186,7 +186,6 @@ public class HomeSubActivity extends AppCompatActivity {
                                 lv_List_cmt.setLayoutParams(params);
                                 lv_List_cmt.requestLayout();
                             }
-                            Log.e("abc","e e e e e");
                         }catch (JSONException e){
                             e.printStackTrace();
                             //Log.e("abc","e e e e e");
@@ -277,7 +276,7 @@ public class HomeSubActivity extends AppCompatActivity {
                         Submit(data);
                     }
                     else {
-                        Toast.makeText(HomeSubActivity.this, "Không nhập bình luận!", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(HomeSubActivity.this, R.string.text_dontaddcmt, Toast.LENGTH_SHORT).show();
                     }
                     closeKeyboard();
                     loadCmt();
@@ -303,7 +302,7 @@ public class HomeSubActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), "Không thể bình luận!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.text_dontcmt, Toast.LENGTH_LONG).show();
             }
         }) {
             @Override

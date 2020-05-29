@@ -96,21 +96,21 @@ public class MainActivity extends AppCompatActivity {
                         //Hoàn thành
                         editor.commit();
 
-                        Intent intentHome = new Intent(MainActivity.this, AccInfoActivity.class);
+                        Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
                         //intentHome.putExtra("accID", account.getAccountId()); //chuyển accountId sang HomeActivity
                         startActivity(intentHome);
                     }
                     else
-                        Toast.makeText(getApplicationContext(), "Đăng nhập thất bại!", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), R.string.text_signinfalse, Toast.LENGTH_LONG).show();
                 } catch (JSONException e) {
-                    Toast.makeText(getApplicationContext(), "Đăng nhập thất bại!", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), R.string.text_signinfalse, Toast.LENGTH_LONG).show();
                     e.printStackTrace();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), "Đăng nhập thất bại!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.text_signinfalse, Toast.LENGTH_LONG).show();
             }
         }) {
             @Override

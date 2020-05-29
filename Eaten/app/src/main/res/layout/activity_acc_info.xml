@@ -50,14 +50,15 @@
                 android:textStyle="italic"/>
         </LinearLayout>
     </LinearLayout>
+
     <TextView
         android:id="@+id/id_status_info"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:textSize="25dp"
-        android:text="Bài viết"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="@string/text_status"
+        android:textSize="25dp" />
     <ListView
         android:id="@+id/id_list_status_info"
         android:layout_width="match_parent"

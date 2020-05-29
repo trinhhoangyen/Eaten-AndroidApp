@@ -97,38 +97,38 @@ public class PostActivity extends AppCompatActivity {
                     Submit(data);
                     //Thông báo đăng ký thành công
                     AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                    builder.setMessage("\nBài viết của bạn đã tải lên thành công!").setCancelable(false).setNegativeButton("Trở về trang chủ", new DialogInterface.OnClickListener() {
+                    builder.setMessage("\n" + R.string.text_addstatustrue).setCancelable(false).setNegativeButton(R.string.text_returnhome, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             Intent intentHome = new Intent(((Dialog)dialog).getContext(), HomeActivity.class);
                             startActivity(intentHome);
                         }
-                    }).setPositiveButton("Tiếp tục", new DialogInterface.OnClickListener() {
+                    }).setPositiveButton(R.string.text_continue, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
                         }
                     });
                     AlertDialog alertDialog = builder.create();
-                    alertDialog.setTitle("Thông báo");
+                    alertDialog.setTitle(R.string.text_notification);
                     alertDialog.show();
                 }
                 else {
                     AlertDialog.Builder builder = new AlertDialog.Builder(v.getContext());
-                    builder.setMessage("\nĐăng bài thất bại, bạn vui lòng nhâp đủ thông tin!").setCancelable(false).setNegativeButton("Thoát", new DialogInterface.OnClickListener() {
+                    builder.setMessage("\n" + R.string.text_shortinfo).setCancelable(false).setNegativeButton(R.string.text_exit, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             Intent intentHome = new Intent(((Dialog)dialog).getContext(), HomeActivity.class);
                             startActivity(intentHome);
                         }
-                    }).setPositiveButton("Tiếp tục", new DialogInterface.OnClickListener() {
+                    }).setPositiveButton(R.string.text_continue, new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
                         }
                     });
                     AlertDialog alertDialog = builder.create();
-                    alertDialog.setTitle("Thông báo");
+                    alertDialog.setTitle(R.string.text_notification);
                     alertDialog.show();
                 }
             }
@@ -176,13 +176,13 @@ public class PostActivity extends AppCompatActivity {
                                     .fit()
                                     .centerCrop()
                                     .into(imgNewPost);
-                            Toast.makeText(PostActivity.this, "Tải ảnh lên thành công!", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(PostActivity.this, R.string.text_loadimgtrue, Toast.LENGTH_SHORT).show();
                         }
                     });
                 }
             });
         } else {
-            Toast.makeText(this, "Thêm ảnh thất bại!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.text_loadimgfalse, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -205,7 +205,7 @@ public class PostActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), "Đăng bài thất bại!", Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), R.string.text_shortinfo, Toast.LENGTH_LONG).show();
             }
         }) {
             @Override
