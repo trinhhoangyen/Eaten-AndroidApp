@@ -16,6 +16,7 @@ import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -39,6 +40,7 @@ import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class HomeSubActivity extends AppCompatActivity {
@@ -163,8 +165,23 @@ public class HomeSubActivity extends AppCompatActivity {
                                     homeSubCmtList.add(homeSubCmt);
                                 }
                             }
+                            Collections.reverse(homeSubCmtList);
                             HomeSubCmtAdapter adapter = new HomeSubCmtAdapter(homeSubCmtList, getApplicationContext());
                             lv_List_cmt.setAdapter(adapter);
+                            //sét độ dài của listview theo độ số lượng cmt
+                            ListAdapter listAdapter = lv_List_cmt.getAdapter();
+                            if(listAdapter != null){
+                                int totalheight = 0 ;
+                                for (int i = 0 ; i < listAdapter.getCount(); i++){
+                                    View listItems = listAdapter.getView(i, null, lv_List_cmt);
+                                    listItems.measure(0,0);
+                                    totalheight += listItems.getMeasuredHeight();
+                                }
+                                ViewGroup.LayoutParams params = lv_List_cmt.getLayoutParams();
+                                params.height = totalheight + (lv_List_cmt.getDividerHeight() * (listAdapter.getCount()-1)) + 5;
+                                lv_List_cmt.setLayoutParams(params);
+                                lv_List_cmt.requestLayout();
+                            }
                             Log.e("abc","e e e e e");
                         }catch (JSONException e){
                             e.printStackTrace();
@@ -246,22 +263,24 @@ public class HomeSubActivity extends AppCompatActivity {
                     if (!content_nocmt.getText().toString().equals("")) {
                         String data = String.format("{\n" +
                                 "  \"commentId\": 1,\n" +
-                                "  \"postId\": %o,\n" +
-                                "  \"accountId\": %o,\n" +
-                                "  \"content\": \"string\",\n" +
+                                "  \"postId\": %d,\n" +
+                                "  \"accountId\": %d,\n" +
+                                "  \"content\": \"%s\",\n" +
                                 "  \"react\": 0,\n" +
                                 "  \"rate\": 0\n" +
-                                "}", temp, accID);
+                                "}", temp+1, accID, content_nocmt.getText().toString());
                         Submit(data);
                     }
                     else {
                         Toast.makeText(HomeSubActivity.this, "Không nhập bình luận!", Toast.LENGTH_SHORT).show();
                     }
                     closeKeyboard();
+                    loadCmt();
                     break;
                 default:
                     break;
             }
+
             return false;
         }
     };
