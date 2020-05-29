@@ -96,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                         //Hoàn thành
                         editor.commit();
 
-                        Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
+                        Intent intentHome = new Intent(MainActivity.this, AccInfoActivity.class);
                         //intentHome.putExtra("accID", account.getAccountId()); //chuyển accountId sang HomeActivity
                         startActivity(intentHome);
                     }

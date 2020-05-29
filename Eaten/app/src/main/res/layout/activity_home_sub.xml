@@ -93,16 +93,17 @@
                         android:layout_margin="5dp"/>
 
                 </LinearLayout>
+
                 <EditText
                     android:id="@+id/id_content_nocmt"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:layout_weight="1"
+                    android:clickable="false"
                     android:ems="10"
-                    android:inputType="textPersonName"
+                    android:hint="Bình luận"
                     android:imeOptions="actionSend"
-                    android:hint="Bình luận" />
+                    android:inputType="textPersonName"/>
             </LinearLayout>
 
 

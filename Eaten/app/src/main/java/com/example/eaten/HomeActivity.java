@@ -64,7 +64,7 @@ public class HomeActivity extends AppCompatActivity {
                 Card card_sub = (Card) cardList.get(position);
                 Intent sub = new Intent(view.getContext(), HomeSubActivity.class);
                 //sub.putExtra("accID", temp); //chuyển accountId sang HomeSubActivity
-                sub.putExtra("card", position);
+                sub.putExtra("card", cardList.get(position).getPostId());
                 startActivity(sub);
             }
         });
