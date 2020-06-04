@@ -2,6 +2,7 @@ package com.example.eaten;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.AlertDialog;
@@ -55,6 +56,11 @@ public class PostActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //Hide ActionBar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
         //

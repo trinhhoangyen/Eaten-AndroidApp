@@ -33,4 +33,11 @@
     <string name="text_loadimgfalse">Thêm ảnh thất bại!</string>
     <string name="text_signintrue">Đăng Ký thành công!</string>
     <string name="text_signupfalse">Đăng ký thất bại!</string>
+
+    //Huy
+    <string name="title_home">Trang chủ</string>
+    <string name="title_videos">Video</string>
+    <string name="title_notifications">Thông báo</string>
+    <string name="title_profile">Tài khoản</string>
+    <string name="title_post"></string>
 </resources>

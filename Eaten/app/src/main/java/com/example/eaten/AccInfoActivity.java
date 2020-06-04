@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -12,6 +14,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.volley.Request;
@@ -23,6 +27,7 @@ import com.android.volley.toolbox.Volley;
 import com.example.eaten.DTO.Account;
 import com.example.eaten.DTO.Card;
 import com.example.eaten.myadapter.CardAdapter;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -45,6 +50,45 @@ public class AccInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acc_info);
+        //Hide ActionBar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
+        //Khai báo BottomNavigation
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.nav_view);
+        //Khi chuyển Activity, select ngay nút vừa chọn
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem1 = menu.getItem(4 );
+        menuItem1.setChecked(true);
+
+        // Xử lý sự kiện click chọn
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        Intent in1 = new Intent(AccInfoActivity.this, HomeActivity.class);
+                        startActivity(in1);
+                        break;
+                    case R.id.navigation_videos:
+                        Intent in2 = new Intent(AccInfoActivity.this, VideosActivity.class);
+                        startActivity(in2);
+                        break;
+                    case R.id.navigation_post:
+                        Intent in3 = new Intent(AccInfoActivity.this, PostActivity.class);
+                        startActivity(in3);
+                        break;
+                    case R.id.navigation_notifications:
+                        Intent in4 = new Intent(AccInfoActivity.this, NotificationsActivity.class);
+                        startActivity(in4);
+                        break;
+                    case R.id.navigation_profile:
+                        break;
+                }
+                return true;
+            }
+
+        });
 
         SharedPreferences sp = getSharedPreferences("Save_ID_Acc", MODE_PRIVATE);
         //Đọc dữ liệu
