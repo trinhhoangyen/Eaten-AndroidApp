@@ -1,5 +1,6 @@
 package com.example.eaten;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -56,6 +57,9 @@ public class HomeSubActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_sub);
         //
+        //Hide ActionBar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
 
         mapping();
 

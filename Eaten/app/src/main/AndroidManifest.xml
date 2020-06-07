@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".PostActivity"></activity>
+        <activity android:name=".VideosActivity"></activity>
+        <activity android:name=".NotificationsActivity"></activity>
+        <activity android:name=".SearchActivity"></activity>
         <activity android:name=".HomeSubActivity" />
         <activity android:name=".AccInfoActivity" />
         <activity android:name=".HomeActivity" />

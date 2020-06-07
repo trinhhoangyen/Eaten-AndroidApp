@@ -1,5 +1,6 @@
 package com.example.eaten;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -33,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        //Hide ActionBar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.hide();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //
@@ -97,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                         editor.commit();
 
                         Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
-                        //intentHome.putExtra("accID", account.getAccountId()); //chuyển accountId sang HomeActivity
+                        intentHome.putExtra("accID", account.getAccountId()); //chuyển accountId sang HomeActivity
                         startActivity(intentHome);
                     }
                     else

@@ -6,7 +6,7 @@ android {
     buildToolsVersion "29.0.2"
     defaultConfig {
         applicationId "com.example.eaten"
-        minSdkVersion 16
+        minSdkVersion 17
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -36,4 +36,11 @@ dependencies {
     implementation 'org.apache.httpcomponents:httpcore:4.4.1'
     implementation 'androidx.cardview:cardview:1.0.0' //sử dụng card view
     implementation 'com.squareup.picasso:picasso:2.5.2' //chuyển url ảnh thành hình ảnh
+
+    //navigation brand Huy
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
+    // Download module Core chứa trình phát youtube
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
+    implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.23'
 }

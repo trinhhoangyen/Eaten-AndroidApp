@@ -4,7 +4,7 @@
     <corners
         android:radius="@dimen/corner_btn" />
     <solid
-        android:color="@color/colorOrgane" />
+        android:color="@color/colorOrange" />
 
 
 </shape>
