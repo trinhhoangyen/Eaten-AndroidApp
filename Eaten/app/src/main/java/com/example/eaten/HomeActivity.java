@@ -115,15 +115,15 @@ public class HomeActivity extends AppCompatActivity {
                         startActivity(in1);
                         break;
                 }
-            return true;
+                return true;
             }
 
         });
 
 
 
-         EditText txtSearch = (EditText) this.findViewById(R.id.txtSearch);
-         txtSearch.setOnClickListener(new View.OnClickListener() {
+        EditText txtSearch = (EditText) this.findViewById(R.id.txtSearch);
+        txtSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent in = new Intent(HomeActivity.this ,SearchActivity.class);
@@ -257,7 +257,7 @@ public class HomeActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
     }
-////
+    ////
 ////
     private void mapping(){
         gv = (GridView) findViewById(R.id.gridView0);

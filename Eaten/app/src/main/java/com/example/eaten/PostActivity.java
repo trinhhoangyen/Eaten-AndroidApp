@@ -14,6 +14,8 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.webkit.MimeTypeMap;
 import android.widget.Button;
@@ -32,6 +34,7 @@ import com.android.volley.toolbox.Volley;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
@@ -63,6 +66,47 @@ public class PostActivity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_post);
+        //bottom navigation
+        BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.nav_view);
+        Menu menu = bottomNavigationView.getMenu();
+//        MenuItem menuItem0 = menu.getItem(0 );
+//        menuItem0.setChecked(true);
+//        MenuItem menuItem1 = menu.getItem(1 );
+//        menuItem1.setChecked(true);
+        MenuItem menuItem2 = menu.getItem(2 );
+        menuItem2.setChecked(true);
+//        MenuItem menuItem3 = menu.getItem(3);
+//        menuItem3.setChecked(true);
+//        MenuItem menuItem4 = menu.getItem(4 );
+//        menuItem4.setChecked(true);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.navigation_home:
+                        Intent in1 = new Intent(PostActivity.this, HomeActivity.class);
+                        startActivity(in1);
+                        break;
+                    case R.id.navigation_videos:
+                        Intent in2 = new Intent(PostActivity.this, VideosActivity.class);
+                        startActivity(in2);
+                        break;
+                    case R.id.navigation_post:
+                        break;
+                    case R.id.navigation_notifications:
+                        Intent in3 = new Intent(PostActivity.this, NotificationsActivity.class);
+                        startActivity(in3);
+                        break;
+                    case R.id.navigation_profile:
+                        Intent in4 = new Intent(PostActivity.this, AccInfoActivity.class);
+                        startActivity(in4);
+                        break;
+                }
+                return true;
+            }
+
+        });
         //
         btnPost = (Button) findViewById(R.id.btnPost);
         edtPostName = (EditText) findViewById(R.id.edtPostName);

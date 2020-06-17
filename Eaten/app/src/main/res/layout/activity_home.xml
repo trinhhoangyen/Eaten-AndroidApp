@@ -25,7 +25,7 @@
         android:id="@+id/spnRegion"
         android:layout_width="167dp"
         android:layout_height="19dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -33,7 +33,7 @@
         android:id="@+id/txtSearch"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/bg_auth_field"
         android:cursorVisible="false"
         android:drawableLeft="@drawable/ic_search_black_24dp"
@@ -57,7 +57,7 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rounded"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -102,9 +102,9 @@
 
     <GridView
         android:id="@+id/gridView0"
-        android:layout_width="411dp"
-        android:layout_height="648dp"
-        android:layout_marginTop="83dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="55dp"
         android:horizontalSpacing="5dp"
         android:numColumns="2"
         android:padding="5dp"
