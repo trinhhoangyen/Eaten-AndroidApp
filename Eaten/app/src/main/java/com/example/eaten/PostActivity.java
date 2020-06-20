@@ -31,6 +31,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
@@ -87,20 +88,24 @@ public class PostActivity extends AppCompatActivity {
                     case R.id.navigation_home:
                         Intent in1 = new Intent(PostActivity.this, HomeActivity.class);
                         startActivity(in1);
+                        Animatoo.animateSlideRight(PostActivity.this);
                         break;
                     case R.id.navigation_videos:
                         Intent in2 = new Intent(PostActivity.this, VideosActivity.class);
                         startActivity(in2);
+                        Animatoo.animateSlideRight(PostActivity.this);
                         break;
                     case R.id.navigation_post:
                         break;
                     case R.id.navigation_notifications:
                         Intent in3 = new Intent(PostActivity.this, NotificationsActivity.class);
                         startActivity(in3);
+                        Animatoo.animateSlideLeft(PostActivity.this);
                         break;
                     case R.id.navigation_profile:
                         Intent in4 = new Intent(PostActivity.this, AccInfoActivity.class);
                         startActivity(in4);
+                        Animatoo.animateSlideLeft(PostActivity.this);
                         break;
                 }
                 return true;

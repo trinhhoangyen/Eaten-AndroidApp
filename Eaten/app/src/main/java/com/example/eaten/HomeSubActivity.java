@@ -122,6 +122,8 @@ public class HomeSubActivity extends AppCompatActivity {
                                     txt_displayName_sub.setText(card.getDisplayName());
                                     txt_loves_sub.setText(String.valueOf(card.getReactQuantity()));
                                     txt_content_sub.setText(card.getContent());
+                                    //Set style Textview
+                                    txt_address_sub.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_location_on_black_24dp, 0, 0, 0);
                                 }
                             }
                         }catch (JSONException e){

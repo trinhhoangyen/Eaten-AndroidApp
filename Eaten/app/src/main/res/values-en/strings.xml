@@ -11,7 +11,7 @@
     <string name="text_btn_sign_out">Sign-up</string>
     <string name="text_status">Posts</string>
     <string name="text_name">Name</string>
-    <string name="text_cmt">Comment</string>
+    <string name="text_cmt">Comment...</string>
     <string name="text_addstatus">Posting</string>
     <string name="text_titlestatus">Post Title</string>
     <string name="text_contentstatus">Post content</string>

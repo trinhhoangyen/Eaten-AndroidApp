@@ -26,7 +26,7 @@
                 android:layout_width="100dp"
                 android:layout_height="40dp"
                 android:layout_gravity="right"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginRight="25dp"
                 android:background="@drawable/bg_auth_btn"
                 android:fontFamily="@font/nunito_sans_bold"

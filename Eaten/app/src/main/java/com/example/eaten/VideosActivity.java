@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
@@ -37,20 +38,24 @@ public class VideosActivity extends AppCompatActivity {
                     case R.id.navigation_home:
                         Intent in1 = new Intent(VideosActivity.this, HomeActivity.class);
                         startActivity(in1);
+                        Animatoo.animateSlideRight(VideosActivity.this);
                         break;
                     case R.id.navigation_videos:
                         break;
                     case R.id.navigation_post:
                         Intent in2 = new Intent(VideosActivity.this, PostActivity.class);
                         startActivity(in2);
+                        Animatoo.animateSlideUp(VideosActivity.this);
                         break;
                     case R.id.navigation_notifications:
                         Intent in3 = new Intent(VideosActivity.this, NotificationsActivity.class);
                         startActivity(in3);
+                        Animatoo.animateSlideLeft(VideosActivity.this);
                         break;
                     case R.id.navigation_profile:
                         Intent in4 = new Intent(VideosActivity.this, AccInfoActivity.class);
                         startActivity(in4);
+                        Animatoo.animateSlideLeft(VideosActivity.this);
                         break;
                 }
                 return true;

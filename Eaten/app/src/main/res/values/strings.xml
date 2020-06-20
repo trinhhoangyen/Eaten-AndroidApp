@@ -15,7 +15,7 @@
     <string name="text_not_have_an_account" translatable="false"><b>Eaten App © 2020</b></string>
     <string name="text_status">Bài viết</string>
     <string name="text_name">Tên</string>
-    <string name="text_cmt">Bình luận</string>
+    <string name="text_cmt">Bình luận...</string>
     <string name="text_addstatus">Đăng bài</string>
     <string name="text_titlestatus">Tiêu đề bài viết...</string>
     <string name="text_contentstatus">Nội dung bài viết...</string>

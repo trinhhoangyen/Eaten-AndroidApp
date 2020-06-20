@@ -36,6 +36,7 @@ dependencies {
     implementation 'org.apache.httpcomponents:httpcore:4.4.1'
     implementation 'androidx.cardview:cardview:1.0.0' //sử dụng card view
     implementation 'com.squareup.picasso:picasso:2.5.2' //chuyển url ảnh thành hình ảnh
+    implementation 'com.github.mohammadatif:Animatoo:master' //animation change Intent
 
     //navigation brand Huy
     implementation 'androidx.navigation:navigation-fragment:2.2.2'

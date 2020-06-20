@@ -37,6 +37,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.example.eaten.DTO.Card;
 import com.example.eaten.myadapter.CardAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -77,20 +78,9 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.nav_view);
-        bottomNavigationView.getBackground().setAlpha(200);
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem0 = menu.getItem(0 );
         menuItem0.setChecked(true);
-
-
-//        MenuItem menuItem1 = menu.getItem(1 );
-//        menuItem1.setChecked(true);
-//        MenuItem menuItem2 = menu.getItem(2 );
-//        menuItem2.setChecked(true);
-//        MenuItem menuItem3 = menu.getItem(3);
-//        menuItem3.setChecked(true);
-//        MenuItem menuItem4 = menu.getItem(4 );
-//        menuItem4.setChecked(true);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
@@ -101,18 +91,22 @@ public class HomeActivity extends AppCompatActivity {
                     case R.id.navigation_videos:
                         Intent in2 = new Intent(HomeActivity.this, VideosActivity.class);
                         startActivity(in2);
+                        Animatoo.animateSlideLeft(HomeActivity.this);
                         break;
                     case R.id.navigation_post:
                         Intent in3 = new Intent(HomeActivity.this, PostActivity.class);
                         startActivity(in3);
+                        Animatoo.animateSlideUp(HomeActivity.this);
                         break;
                     case R.id.navigation_notifications:
                         Intent in4 = new Intent(HomeActivity.this, NotificationsActivity.class);
                         startActivity(in4);
+                        Animatoo.animateSlideLeft(HomeActivity.this);
                         break;
                     case R.id.navigation_profile:
                         Intent in1 = new Intent(HomeActivity.this, AccInfoActivity.class);
                         startActivity(in1);
+                        Animatoo.animateSlideLeft(HomeActivity.this);
                         break;
                 }
                 return true;
@@ -152,47 +146,47 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        spinnerRegion = (Spinner) findViewById(R.id.spnRegion);
-        final ArrayList<String> arrayRegion = new ArrayList<String>();
-        arrayRegion.add("TP HỒ CHÍ MINH");
-        arrayRegion.add("TP CẦN THƠ");
-        arrayRegion.add("TP CAO LÃNH");
-        arrayRegion.add("TP VĨNH LONG");
-        arrayRegion.add("TP BẢO LỘC");
-        arrayRegion.add("TP TÂN AN");
-        arrayRegion.add("TP SA ĐÉC");
-        arrayRegion.add("TP HỒ CHÍ MINH");
-        arrayRegion.add("TP CẦN THƠ");
-        arrayRegion.add("TP CAO LÃNH");
-        arrayRegion.add("TP VĨNH LONG");
-        arrayRegion.add("TP BẢO LỘC");
-        arrayRegion.add("TP TÂN AN");
-        arrayRegion.add("TP SA ĐÉC");
-        arrayRegion.add("TP HỒ CHÍ MINH");
-        arrayRegion.add("TP CẦN THƠ");
-        arrayRegion.add("TP CAO LÃNH");
-        arrayRegion.add("TP VĨNH LONG");
-        arrayRegion.add("TP BẢO LỘC");
-        arrayRegion.add("TP TÂN AN");
-        arrayRegion.add("TP SA ĐÉC");
+//        spinnerRegion = (Spinner) findViewById(R.id.spnRegion);
+//        final ArrayList<String> arrayRegion = new ArrayList<String>();
+//        arrayRegion.add("TP HỒ CHÍ MINH");
+//        arrayRegion.add("TP CẦN THƠ");
+//        arrayRegion.add("TP CAO LÃNH");
+//        arrayRegion.add("TP VĨNH LONG");
+//        arrayRegion.add("TP BẢO LỘC");
+//        arrayRegion.add("TP TÂN AN");
+//        arrayRegion.add("TP SA ĐÉC");
+//        arrayRegion.add("TP HỒ CHÍ MINH");
+//        arrayRegion.add("TP CẦN THƠ");
+//        arrayRegion.add("TP CAO LÃNH");
+//        arrayRegion.add("TP VĨNH LONG");
+//        arrayRegion.add("TP BẢO LỘC");
+//        arrayRegion.add("TP TÂN AN");
+//        arrayRegion.add("TP SA ĐÉC");
+//        arrayRegion.add("TP HỒ CHÍ MINH");
+//        arrayRegion.add("TP CẦN THƠ");
+//        arrayRegion.add("TP CAO LÃNH");
+//        arrayRegion.add("TP VĨNH LONG");
+//        arrayRegion.add("TP BẢO LỘC");
+//        arrayRegion.add("TP TÂN AN");
+//        arrayRegion.add("TP SA ĐÉC");
 
-        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, arrayRegion);
-        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerRegion.setAdapter(arrayAdapter);
+//        ArrayAdapter arrayAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, arrayRegion);
+//        arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spinnerRegion.setAdapter(arrayAdapter);
 
-        spinnerRegion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(HomeActivity.this, arrayRegion.get(position), Toast.LENGTH_SHORT).show();
-            }
+//        spinnerRegion.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+//            @Override
+//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+//                Toast.makeText(HomeActivity.this, arrayRegion.get(position), Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public void onNothingSelected(AdapterView<?> parent) {
+//
+//            }
+//        });
 
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-        spinnerRegion.setMinimumHeight(100);
+//        spinnerRegion.setMinimumHeight(100);
 
     }
 
@@ -347,20 +341,13 @@ public class HomeActivity extends AppCompatActivity {
                     String Doc_address=obj.getString("address");
 
                     //Log.d("documentName","JSON Result : " + result);
-
-
                 }
-
 
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
-
         }
     }
-
-
 }
 
 
