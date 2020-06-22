@@ -24,10 +24,11 @@
 ---
 
 ## Mô Tả Hệ Thống
-- [Công Nghệ](#Công Nghệ)
+- [Technical](#Technical)
 - [Image](#Image)
 
 ---
+
 ## Công Nghệ
 
 ```
