@@ -4,12 +4,16 @@
 # Eaten - Ứng Dụng Kết Nối Những Tâm Hồn Ăn Uống 
 
 > Eaten là ứng dụng được xây dựng trên nền tảng Android.
+
 > Chia sẻ nhận xét, bình phẩm các món ăn, địa điểm ăn uống siêu hot từ khắp mọi nơi trên thế giới.
 
 **Về chúng tôi - Eaten Group**
 > <a href="http://facebook.com/nguyentu.299" target="_blank">**Nguyễn Thanh Tú**</a>.
+
 > <a href="http://facebook.com/trhgyen" target="_blank">**Trịnh Hoàng Yến**</a>.
+
 > <a href="http://facebook.com/hoangminh.luu.716" target="_blank">**Nguyễn Hoàng Huy**</a>.
+
 > <a href="http://facebook.com/hoanghuy2015" target="_blank">**Lưu Hoàng Minh**</a>.
 
 - Build status: 90%
