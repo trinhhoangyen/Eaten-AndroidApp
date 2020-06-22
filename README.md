@@ -46,8 +46,7 @@ Frontend
 
 # Image
 
-![Image]({% img https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811489.png?alt=media&token=06991a01-5f90-4228-a611-84d0a4912c31 100x200 %})
-
+<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811489.png?alt=media&token=06991a01-5f90-4228-a611-84d0a4912c31" title="Eaten" alt="Eaten" width="300" height="500">
 ---
 
 ![Image](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/picturemessage_i2xujors.g3s.png?alt=media&token=f0348f43-ce36-4d92-bc91-d8344ab4ef65) 
