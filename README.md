@@ -28,7 +28,7 @@
 - [Image](#Image)
 
 ---
-## Công Nghệ
+## CôngNghệ
 
 ```
 
