@@ -11,9 +11,9 @@
 
 > <a href="http://facebook.com/trhgyen" target="_blank">**Trịnh Hoàng Yến**</a>
 
-> <a href="http://facebook.com/hoangminh.luu.716" target="_blank">**Nguyễn Hoàng Huy**</a>
+> <a href="http://facebook.com/hoanghuy2015" target="_blank">**Nguyễn Hoàng Huy**</a>
 
-> <a href="http://facebook.com/hoanghuy2015" target="_blank">**Lưu Hoàng Minh**</a>
+> <a href="http://facebook.com/hoangminh.luu.716" target="_blank">**Lưu Hoàng Minh**</a>
 
 **Build status: 90%**
 
