@@ -11,7 +11,7 @@
     <string name="text_btn_sign_out">Sign-up</string>
     <string name="text_status">Posts</string>
     <string name="text_name">Name</string>
-    <string name="text_cmt">Comment</string>
+    <string name="text_cmt">Comment...</string>
     <string name="text_addstatus">Posting</string>
     <string name="text_titlestatus">Post Title</string>
     <string name="text_contentstatus">Post content</string>
@@ -22,15 +22,15 @@
     <string name="text_dontcmt">Can\'t comment</string>
     <string name="text_signinfalse">Login failed!</string>
     <string name="text_addstatustrue">Your article has been uploaded successfully!</string>
-    <string name="text_returnhome">Back to homepage!</string>
-    <string name="text_continue">Continue!</string>
-    <string name="text_notification">notify</string>
+    <string name="text_returnhome">Back to homepage</string>
+    <string name="text_continue">Continue</string>
+    <string name="text_notification">Notification</string>
     <string name="text_shortinfo">Post failed, please enter enough information!</string>
     <string name="text_exit">Exit</string>
     <string name="text_loadimgtrue">Successfully!</string>
     <string name="text_loadimgfalse">Fail!</string>
-    <string name="text_signintrue">Success!</string>
-    <string name="text_signupfalse">Registration failed!</string>
+    <string name="text_signuptrue">Register Successfully!</string>
+    <string name="text_signupfalse">Register Failed!</string>
 
     //Huy
     <string name="title_home">Home</string>
@@ -38,4 +38,6 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_profile">Profile</string>
     <string name="title_post"></string>
+    <string name="text_hint_display_name">Display Name</string>
+    <string name="text_hint_year_of_birth">Year Of Birth</string>
 </resources>

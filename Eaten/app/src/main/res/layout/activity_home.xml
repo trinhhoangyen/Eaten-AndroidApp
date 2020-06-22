@@ -5,35 +5,31 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".HomeActivity">
-
-    <!--    <Button-->
-    <!--        android:id="@+id/btnNewPost"-->
-    <!--        android:layout_width="100dp"-->
-    <!--        android:layout_height="40dp"-->
-    <!--        android:layout_gravity=""-->
-    <!--        android:background="@drawable/bg_auth_btn"-->
-    <!--        android:fontFamily="@font/nunito_sans_bold"-->
-    <!--        android:text="Bài Viết Mới"-->
-    <!--        android:textColor="@color/colorTextORIcon"-->
-    <!--        android:textSize="10dp"-->
-    <!--        tools:layout_editor_absoluteX="1dp"-->
-    <!--        tools:layout_editor_absoluteY="1dp" />-->
+    <!--    <Spinner-->
+    <!--        android:id="@+id/spnRegion"-->
+    <!--        android:layout_width="167dp"-->
+    <!--        android:layout_height="19dp"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
 
-    <Spinner
-        android:id="@+id/spnRegion"
-        android:layout_width="167dp"
-        android:layout_height="19dp"
-        android:layout_marginTop="28dp"
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:src="@mipmap/ic_launcher_eatenlogo_2_foreground"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    >
 
     <EditText
         android:id="@+id/txtSearch"
-        android:layout_width="250dp"
+        android:layout_width="290dp"
         android:layout_height="50dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="5dp"
         android:background="@drawable/bg_auth_field"
         android:cursorVisible="false"
         android:drawableLeft="@drawable/ic_search_black_24dp"
@@ -46,6 +42,7 @@
         android:imeOptions="actionNext"
         android:inputType="none"
         android:padding="@dimen/padding_field"
+        android:layout_marginRight="20dp"
         android:textColor="@color/colorPrimaryText"
         android:textColorHint="@color/colorSecondaryText"
         android:textSize="@dimen/text_body_size"
@@ -55,38 +52,25 @@
         tools:ignore="Autofill"
         tools:targetApi="jelly_bean" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/nav_view"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/rounded"
+
+    <GridView
+        android:id="@+id/gridView0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="65dp"
+        android:elevation="5dp"
+        android:horizontalSpacing="5dp"
+        android:numColumns="2"
+        android:padding="5dp"
+        android:verticalSpacing="15dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
-
-    <!--    <fragment-->
-    <!--        android:id="@+id/nav_host_fragment"-->
-    <!--        android:name="androidx.navigation.fragment.NavHostFragment"-->
-    <!--        android:layout_width="35dp"-->
-    <!--        android:layout_height="18dp"-->
-    <!--        android:layout_marginTop="58dp"-->
-    <!--        app:defaultNavHost="true"-->
-    <!--        app:layout_constraintBottom_toTopOf="@id/nav_view"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.042"-->
-    <!--        app:layout_constraintLeft_toLeftOf="parent"-->
-    <!--        app:layout_constraintRight_toRightOf="parent"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent"-->
-    <!--        app:layout_constraintVertical_bias="0.0"-->
-    <!--        app:navGraph="@navigation/mobile_navigation" />-->
+    </GridView>
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -100,22 +84,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <GridView
-        android:id="@+id/gridView0"
-        android:layout_width="411dp"
-        android:layout_height="648dp"
-        android:layout_marginTop="83dp"
-        android:horizontalSpacing="5dp"
-        android:numColumns="2"
-        android:padding="5dp"
-        android:verticalSpacing="5dp"
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:menu="@menu/bottom_nav_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
 
-    </GridView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

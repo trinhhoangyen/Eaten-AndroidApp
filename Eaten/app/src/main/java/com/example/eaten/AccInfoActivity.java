@@ -1,13 +1,17 @@
 package com.example.eaten;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
@@ -18,12 +22,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.example.eaten.DTO.Account;
 import com.example.eaten.DTO.Card;
 import com.example.eaten.myadapter.CardAdapter;
@@ -34,6 +40,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,8 +48,9 @@ public class AccInfoActivity extends AppCompatActivity {
     ListView lv;
     List<Card> cardList;
     ImageView acc_info;
-    TextView displayname_info, email_info, gender_info, year_info;
+    TextView displayname_info, email_info, gender_info, year_info, quantity;
     int temp;
+    Dialog myDialog;
 
     private static final String JSON_URL = "https://eatenapi.azurewebsites.net/api/Posts/get-all-post-info";
     private static final String JSON_URLACC = "https://eatenapi.azurewebsites.net/api/Accounts/get-all";
@@ -50,6 +58,8 @@ public class AccInfoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_acc_info);
+        myDialog = new Dialog(this);
+
         //Hide ActionBar
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
@@ -69,18 +79,22 @@ public class AccInfoActivity extends AppCompatActivity {
                     case R.id.navigation_home:
                         Intent in1 = new Intent(AccInfoActivity.this, HomeActivity.class);
                         startActivity(in1);
+                        Animatoo.animateSlideRight(AccInfoActivity.this);
                         break;
                     case R.id.navigation_videos:
                         Intent in2 = new Intent(AccInfoActivity.this, VideosActivity.class);
                         startActivity(in2);
+                        Animatoo.animateSlideRight(AccInfoActivity.this);
                         break;
                     case R.id.navigation_post:
                         Intent in3 = new Intent(AccInfoActivity.this, PostActivity.class);
                         startActivity(in3);
+                        Animatoo.animateSlideUp(AccInfoActivity.this);
                         break;
                     case R.id.navigation_notifications:
                         Intent in4 = new Intent(AccInfoActivity.this, NotificationsActivity.class);
                         startActivity(in4);
+                        Animatoo.animateSlideRight(AccInfoActivity.this);
                         break;
                     case R.id.navigation_profile:
                         break;
@@ -97,6 +111,8 @@ public class AccInfoActivity extends AppCompatActivity {
         mapping();
         loadacc();
         loadlv();
+        loadPostQuantity();
+
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -219,5 +235,85 @@ public class AccInfoActivity extends AppCompatActivity {
         gender_info = (TextView) findViewById(R.id.id_gender_info);
         year_info = (TextView) findViewById(R.id.id_year_info);
         lv = (ListView) findViewById(R.id.id_list_status_info);
+        quantity = (TextView) findViewById(R.id.quantity_post);
+    }
+
+    private void mapping_popup(Dialog myDialog){
+        displayname_info = myDialog.findViewById(R.id.id_displayname_info);
+        acc_info = myDialog.findViewById(R.id.id_acc_info);
+        email_info = myDialog.findViewById(R.id.id_email_info);
+        gender_info = myDialog.findViewById(R.id.id_gender_info);
+        year_info = myDialog.findViewById(R.id.id_year_info);
+    }
+
+    public void showPopup(View v){
+        TextView txtclose;
+        Button btnFl;
+        myDialog.setContentView(R.layout.profiledetail_popup);
+        mapping_popup(myDialog);
+        loadacc();
+        Button btnLogout = myDialog.findViewById(R.id.btnlogout);
+        btnLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(AccInfoActivity.this, MainActivity.class);
+                finish();
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+            }
+        });
+        txtclose = (TextView) myDialog.findViewById(R.id.txtclose);
+//        btnFl = (Button) myDialog.findViewById(R.id.btnfollow);
+        txtclose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                myDialog.dismiss();
+            }
+        });
+        myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        myDialog.show();
+    }
+
+
+    private void loadPostQuantity(){
+        String data = String.format("{\n" +
+                "  \"id\": %d,\n" +
+                "  \"keyword\": \"string\"\n" +
+                "}", temp);
+        Submit(data);
+    }
+
+    private void Submit(String data) {
+        final String savedata = data;
+        String URL = "https://eatenapi.azurewebsites.net/api/Accounts/get-post-quantity";
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue = Volley.newRequestQueue(getApplicationContext());
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                quantity.setText(response);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
+        }) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+
+            @Override
+            public byte[] getBody() throws AuthFailureError {
+                try {
+                    return savedata == null ? null : savedata.getBytes("utf-8");
+                } catch (UnsupportedEncodingException uee) {
+                    //Log.v("Unsupported Encoding while trying to get the bytes", data);
+                    return null;
+                }
+            }
+        };
+        requestQueue.add(stringRequest);
     }
 }
