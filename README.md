@@ -1,4 +1,4 @@
-<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/EATEN_logo_tran.png?alt=media&token=ff04101c-0e6a-43b5-aed9-f65790cfc6a3" title="ivermin1123" width="200" height="200" alt="Eaten" ></a>
+<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/EATEN_logo_tran.png?alt=media&token=ff04101c-0e6a-43b5-aed9-f65790cfc6a3" title="Eaten" alt="Eaten" width="200" height="200">
 
 
 # Eaten - Ứng Dụng Kết Nối Những Tâm Hồn Ăn Uống 
@@ -29,24 +29,25 @@
 ---
 
 ## HinhAnh
+<img src="" title="Eaten" alt="Eaten" width="300" height="300">
 
-![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811489.png?alt=media&token=06991a01-5f90-4228-a611-84d0a4912c31)
-
----
-
-![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592812513.png?alt=media&token=361da5e2-b0f0-4127-9729-c92b02401aaa) 
+![HinhAnh](<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811489.png?alt=media&token=06991a01-5f90-4228-a611-84d0a4912c31" title="Eaten" alt="Eaten" width="300" height="300">)
 
 ---
 
-![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811543.png?alt=media&token=a563398f-eeea-48e9-9655-f6b34d48901d) 
+![HinhAnh](<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592812513.png?alt=media&token=361da5e2-b0f0-4127-9729-c92b02401aaa" title="Eaten" alt="Eaten" width="300" height="300">) 
 
 ---
 
-![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592813965.png?alt=media&token=c196aedf-8b1b-48e9-9286-8f8d0fb23228) 
+![HinhAnh](<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811543.png?alt=media&token=a563398f-eeea-48e9-9655-f6b34d48901d" title="Eaten" alt="Eaten" width="300" height="300">) 
 
 ---
 
-![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592814176.png?alt=media&token=476f8bb9-5e8f-43ef-8b5a-de0c00e0b148) 
+![HinhAnh](<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592813965.png?alt=media&token=c196aedf-8b1b-48e9-9286-8f8d0fb23228" title="Eaten" alt="Eaten" width="300" height="300">) 
+
+---
+
+![HinhAnh](<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592814176.png?alt=media&token=476f8bb9-5e8f-43ef-8b5a-de0c00e0b148" title="Eaten" alt="Eaten" width="300" height="300">) 
 
 ---
 
