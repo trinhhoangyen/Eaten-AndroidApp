@@ -4,6 +4,8 @@
     <string name="text_sign_in_subtitle">Mang đến những trải nghiệm thú vị của cuộc sống.</string>
     <string name="text_sign_in_subtitleChild">Những bài review Chân Thật - Lôi Cuốn.</string>
     <string name="text_hint_email_field" translatable="false">Email</string>
+    <string name="text_hint_display_name">Tên hiển thị</string>
+    <string name="text_hint_year_of_birth">Năm sinh</string>
     <string name="text_hint_password_field">Mật Khẩu</string>
     <string name="hint_password_register">Nhập mật khẩu</string>
     <string name="hint_password_register_agian">Nhập lại mật khẩu</string>
@@ -13,7 +15,7 @@
     <string name="text_not_have_an_account" translatable="false"><b>Eaten App © 2020</b></string>
     <string name="text_status">Bài viết</string>
     <string name="text_name">Tên</string>
-    <string name="text_cmt">Bình luận</string>
+    <string name="text_cmt">Bình luận...</string>
     <string name="text_addstatus">Đăng bài</string>
     <string name="text_titlestatus">Tiêu đề bài viết...</string>
     <string name="text_contentstatus">Nội dung bài viết...</string>
@@ -31,7 +33,7 @@
     <string name="text_exit">Thoát</string>
     <string name="text_loadimgtrue">Tải ảnh lên thành công!</string>
     <string name="text_loadimgfalse">Thêm ảnh thất bại!</string>
-    <string name="text_signintrue">Đăng Ký thành công!</string>
+    <string name="text_signuptrue">Đăng Ký thành công!</string>
     <string name="text_signupfalse">Đăng ký thất bại!</string>
 
     //Huy

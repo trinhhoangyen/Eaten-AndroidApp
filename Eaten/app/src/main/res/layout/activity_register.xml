@@ -70,6 +70,31 @@
         tools:targetApi="jelly_bean" />
 
     <EditText
+        android:id="@+id/edtDisplayName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginStart="@dimen/margin_auth"
+        android:layout_marginEnd="@dimen/margin_auth"
+        android:padding="@dimen/padding_field"
+        android:imeOptions="actionNext"
+        android:background="@drawable/bg_auth_field"
+        android:drawablePadding="@dimen/padding_field"
+        android:drawableStart="@drawable/ic_user"
+        android:fontFamily="@font/nunito_sans_reguler"
+        android:hint="@string/text_hint_display_name"
+        android:inputType="text"
+        android:textColor="@color/colorPrimaryText"
+        android:textSize="@dimen/text_body_size"
+        android:textColorHint="@color/colorSecondaryText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+        tools:ignore="Autofill"
+        android:drawableLeft="@drawable/ic_mail"
+        tools:targetApi="jelly_bean" />
+
+    <EditText
         android:id="@+id/edtPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -89,7 +114,7 @@
         android:textSize="@dimen/text_body_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edtDisplayName"
         tools:ignore="Autofill"
         android:drawableLeft="@drawable/ic_password"
         tools:targetApi="jelly_bean" />
@@ -99,7 +124,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_auth"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="@dimen/margin_default"
         android:layout_marginEnd="@dimen/margin_auth"
         android:background="@drawable/bg_auth_field"
         android:drawableStart="@drawable/ic_password"
@@ -116,26 +141,25 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edtPassword"
         tools:ignore="Autofill"
         tools:targetApi="jelly_bean" />
 
-
     <EditText
-        android:id="@+id/edtPasswordAgain2"
-        android:layout_width="match_parent"
+        android:id="@+id/edtYearOfBirth"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_auth"
-        android:layout_marginTop="144dp"
+        android:layout_marginTop="@dimen/margin_default"
         android:layout_marginEnd="@dimen/margin_auth"
         android:background="@drawable/bg_auth_field"
-        android:drawableStart="@drawable/ic_password"
-        android:drawableLeft="@drawable/ic_password"
-        android:drawablePadding="@dimen/padding_field"
+        android:drawableStart="@drawable/ic_age"
+        android:drawableLeft="@drawable/ic_age"
+        android:drawablePadding="0dp"
         android:fontFamily="@font/nunito_sans_reguler"
-        android:hint="@string/hint_password_register_agian"
-        android:imeOptions="actionDone"
-        android:inputType="textPassword"
+        android:hint="@string/text_hint_year_of_birth"
+        android:imeOptions="actionNext"
+        android:inputType="number"
         android:padding="@dimen/padding_field"
         android:textColor="@color/colorPrimaryText"
         android:textColorHint="@color/colorSecondaryText"
@@ -143,7 +167,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordAgain"
+        tools:ignore="Autofill"
+        tools:targetApi="jelly_bean" />
+
+    <Spinner
+        android:id="@+id/spnGender"
+        android:layout_width="200dp"
+        android:layout_height="62dp"
+        android:layout_marginStart="@dimen/margin_auth"
+        android:layout_marginTop="@dimen/margin_default"
+        android:layout_marginEnd="@dimen/margin_auth"
+        android:background="@drawable/bg_auth_field"
+        android:paddingLeft="10dp"
+        android:fontFamily="@font/nunito_sans_reguler"
+        android:hint="@string/text_hint_year_of_birth"
+        android:imeOptions="actionNext"
+        android:padding="@dimen/padding_field"
+        android:textColor="@color/colorPrimaryText"
+        android:textColorHint="@color/colorSecondaryText"
+        android:textSize="@dimen/text_body_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPasswordAgain"
         tools:ignore="Autofill"
         tools:targetApi="jelly_bean" />
 
@@ -162,7 +209,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edtPasswordAgain"
+        app:layout_constraintTop_toBottomOf="@+id/edtYearOfBirth"
         tools:targetApi="jelly_bean" />
 
     <TextView

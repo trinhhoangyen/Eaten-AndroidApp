@@ -8,88 +8,88 @@
     tools:context=".ui.home.HomeFragment"
     android:background="@drawable/bg">
 
-<!--    <Spinner-->
-<!--        android:id="@+id/spnRegion"-->
-<!--        android:layout_width="130dp"-->
-<!--        android:layout_height="26dp"-->
-<!--        android:layout_marginStart="8dp"-->
-<!--        android:layout_marginLeft="8dp"-->
-<!--        android:layout_marginTop="24dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <!--    <Spinner-->
+    <!--        android:id="@+id/spnRegion"-->
+    <!--        android:layout_width="130dp"-->
+    <!--        android:layout_height="26dp"-->
+    <!--        android:layout_marginStart="8dp"-->
+    <!--        android:layout_marginLeft="8dp"-->
+    <!--        android:layout_marginTop="24dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-<!--    <GridView-->
-<!--        android:id="@+id/gridView0"-->
-<!--        android:layout_width="413dp"-->
-<!--        android:layout_height="583dp"-->
-<!--        android:layout_marginStart="1dp"-->
-<!--        android:layout_marginLeft="1dp"-->
-<!--        android:layout_marginTop="1dp"-->
-<!--        android:layout_marginEnd="1dp"-->
-<!--        android:layout_marginRight="1dp"-->
-<!--        android:layout_marginBottom="1dp"-->
-<!--        android:horizontalSpacing="5dp"-->
-<!--        android:numColumns="1"-->
-<!--        android:padding="5dp"-->
-<!--        android:verticalSpacing="5dp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.678"/>-->
+    <!--    <GridView-->
+    <!--        android:id="@+id/gridView0"-->
+    <!--        android:layout_width="413dp"-->
+    <!--        android:layout_height="583dp"-->
+    <!--        android:layout_marginStart="1dp"-->
+    <!--        android:layout_marginLeft="1dp"-->
+    <!--        android:layout_marginTop="1dp"-->
+    <!--        android:layout_marginEnd="1dp"-->
+    <!--        android:layout_marginRight="1dp"-->
+    <!--        android:layout_marginBottom="1dp"-->
+    <!--        android:horizontalSpacing="5dp"-->
+    <!--        android:numColumns="1"-->
+    <!--        android:padding="5dp"-->
+    <!--        android:verticalSpacing="5dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        app:layout_constraintVertical_bias="0.678"/>-->
 
-<!--    <TextView-->
-<!--        android:id="@+id/text_home"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="8dp"-->
-<!--        android:layout_marginTop="357dp"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        android:textAlignment="center"-->
-<!--        android:textSize="20sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <!--    <TextView-->
+    <!--        android:id="@+id/text_home"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="8dp"-->
+    <!--        android:layout_marginTop="357dp"-->
+    <!--        android:layout_marginEnd="8dp"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:textSize="20sp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-<!--    <ProgressBar-->
-<!--        android:id="@+id/progressBar"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerVertical="true"-->
-<!--        android:visibility="gone"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintHorizontal_bias="0.5"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent" />-->
+    <!--    <ProgressBar-->
+    <!--        android:id="@+id/progressBar"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_centerVertical="true"-->
+    <!--        android:visibility="gone"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.5"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-<!--    <EditText-->
-<!--        android:id="@+id/txtSearch"-->
-<!--        android:layout_width="250dp"-->
-<!--        android:layout_height="45dp"-->
-<!--        android:layout_marginTop="16dp"-->
-<!--        android:layout_marginEnd="8dp"-->
-<!--        android:layout_marginRight="8dp"-->
-<!--        android:background="@drawable/bg_auth_field"-->
-<!--        android:cursorVisible="false"-->
-<!--        android:drawableLeft="@drawable/ic_search_black_24dp"-->
-<!--        android:drawablePadding="@dimen/padding_field"-->
-<!--        android:focusable="false"-->
-<!--        android:focusableInTouchMode="false"-->
-<!--        android:fontFamily="@font/nunito_sans_reguler"-->
+    <!--    <EditText-->
+    <!--        android:id="@+id/txtSearch"-->
+    <!--        android:layout_width="250dp"-->
+    <!--        android:layout_height="45dp"-->
+    <!--        android:layout_marginTop="16dp"-->
+    <!--        android:layout_marginEnd="8dp"-->
+    <!--        android:layout_marginRight="8dp"-->
+    <!--        android:background="@drawable/bg_auth_field"-->
+    <!--        android:cursorVisible="false"-->
+    <!--        android:drawableLeft="@drawable/ic_search_black_24dp"-->
+    <!--        android:drawablePadding="@dimen/padding_field"-->
+    <!--        android:focusable="false"-->
+    <!--        android:focusableInTouchMode="false"-->
+    <!--        android:fontFamily="@font/nunito_sans_reguler"-->
 
-<!--        android:hint="Search"-->
-<!--        android:imeOptions="actionNext"-->
-<!--        android:inputType="none"-->
-<!--        android:padding="@dimen/padding_field"-->
-<!--        android:textColor="@color/colorPrimaryText"-->
-<!--        android:textColorHint="@color/colorSecondaryText"-->
-<!--        android:textSize="@dimen/text_body_size"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
+    <!--        android:hint="Search"-->
+    <!--        android:imeOptions="actionNext"-->
+    <!--        android:inputType="none"-->
+    <!--        android:padding="@dimen/padding_field"-->
+    <!--        android:textColor="@color/colorPrimaryText"-->
+    <!--        android:textColorHint="@color/colorSecondaryText"-->
+    <!--        android:textSize="@dimen/text_body_size"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent"-->
 
-<!--        tools:ignore="Autofill"-->
-<!--        tools:targetApi="jelly_bean" />-->
+    <!--        tools:ignore="Autofill"-->
+    <!--        tools:targetApi="jelly_bean" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
