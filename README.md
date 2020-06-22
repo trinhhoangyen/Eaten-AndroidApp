@@ -24,21 +24,21 @@
 ---
 
 ## Mô Tả Hệ Thống
-- [Technical](#Technical)
+- [Công Nghệ](#CôngNghệ)
 - [Image](#Image)
 
 ---
-## Technical
+## Công Nghệ
 
 ```
 
-**Backend**
+Backend
  1: Microsoft SqlServer
  2: API - MVC ASP .NET Core
  3: Microsoft Azure
  4: Firebase
  
- **Frontend**
+Frontend
  1: Android Studio
  
 ```
