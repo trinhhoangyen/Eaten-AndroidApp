@@ -1,4 +1,4 @@
-<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/EATEN_logo_tran.png?alt=media&token=ff04101c-0e6a-43b5-aed9-f65790cfc6a3" title="Eaten" alt="Eaten" width="200" height="200">
+<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/EATEN_logo_tran.png?alt=media&token=ff04101c-0e6a-43b5-aed9-f65790cfc6a3" title="Eaten" alt="Eaten" width="300" height="300">
 
 
 # Eaten - Ứng Dụng Kết Nối Những Tâm Hồn Ăn Uống 
@@ -31,7 +31,7 @@
 ## HinhAnh
 <img src="" title="Eaten" alt="Eaten" width="300" height="300">
 
-![HinhAnh](<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811489.png?alt=media&token=06991a01-5f90-4228-a611-84d0a4912c31" title="Eaten" alt="Eaten" width="300" height="300">)
+![HinhAnh](<p>aaaaaa</p>)
 
 ---
 
