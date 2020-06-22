@@ -1,5 +1,6 @@
-<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/EATEN_logo_tran.png?alt=media&token=ff04101c-0e6a-43b5-aed9-f65790cfc6a3" title="Eaten" alt="Eaten" width="300" height="300" align="center">
-
+<p align="center">
+ <img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/EATEN_logo_tran.png?alt=media&token=ff04101c-0e6a-43b5-aed9-f65790cfc6a3" title="Eaten" alt="Eaten" width="300" height="300">
+</p>
 
 # Eaten - Ứng Dụng Kết Nối Những Tâm Hồn Ăn Uống 
 
