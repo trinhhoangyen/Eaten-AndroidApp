@@ -24,8 +24,24 @@
 ---
 
 ## Mô Tả Hệ Thống
-- [Image](#Image)
 - [Technical](#Technical)
+- [Image](#Image)
+
+---
+## Technical
+
+```
+
+**Backend**
+ 1: Microsoft SqlServer
+ 2: API - MVC ASP .NET Core
+ 3: Microsoft Azure
+ 4: Firebase
+ 
+ **Frontend**
+ 1: Android Studio
+ 
+```
 
 ---
 
@@ -58,19 +74,6 @@
 ![Image](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592812457.png?alt=media&token=d8be7477-09e6-4fe3-b0ec-71d4d8a049d3) 
 
 ---
-## Technical
 
-```
-
-**Backend**
- 1: Microsoft SqlServer
- 2: API - MVC ASP .NET Core
- 3: Microsoft Azure
- 4: Firebase
- 
- **Frontend**
- 1: Android Studio
- 
-```
 
 
