@@ -8,56 +8,56 @@
 > Chia sẻ nhận xét, bình phẩm các món ăn, địa điểm ăn uống siêu hot từ khắp mọi nơi trên thế giới.
 
 **Về chúng tôi - Eaten Group**
-> <a href="http://facebook.com/nguyentu.299" target="_blank">**Nguyễn Thanh Tú**</a>.
+> <a href="http://facebook.com/nguyentu.299" target="_blank">**Nguyễn Thanh Tú**</a>
 
-> <a href="http://facebook.com/trhgyen" target="_blank">**Trịnh Hoàng Yến**</a>.
+> <a href="http://facebook.com/trhgyen" target="_blank">**Trịnh Hoàng Yến**</a>
 
-> <a href="http://facebook.com/hoangminh.luu.716" target="_blank">**Nguyễn Hoàng Huy**</a>.
+> <a href="http://facebook.com/hoangminh.luu.716" target="_blank">**Nguyễn Hoàng Huy**</a>
 
-> <a href="http://facebook.com/hoanghuy2015" target="_blank">**Lưu Hoàng Minh**</a>.
+> <a href="http://facebook.com/hoanghuy2015" target="_blank">**Lưu Hoàng Minh**</a>
 
-- Build status: 90%
+**Build status: 90%**
 
 ![Build Status](https://img.shields.io/badge/Build%3A-testing-green)
 
 ---
 
 ## Mô Tả Hệ Thống
-- [HinhAnh](#Hình Ảnh)
-- [CongNghe](#Công Nghệ)
+- [Hình Ảnh](#Hình Ảnh)
+- [Công Nghệ](#Công Nghệ)
 
 ---
 
 ## HinhAnh
 
-![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811489.png?alt=media&token=06991a01-5f90-4228-a611-84d0a4912c31)
+![Hình Ảnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811489.png?alt=media&token=06991a01-5f90-4228-a611-84d0a4912c31)
 
 ---
 
-![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592812513.png?alt=media&token=361da5e2-b0f0-4127-9729-c92b02401aaa) 
+![Hình Ảnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592812513.png?alt=media&token=361da5e2-b0f0-4127-9729-c92b02401aaa) 
 
 ---
 
-![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811543.png?alt=media&token=a563398f-eeea-48e9-9655-f6b34d48901d) 
+![Hình Ảnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811543.png?alt=media&token=a563398f-eeea-48e9-9655-f6b34d48901d) 
 
 ---
 
-![HinhAnh]() 
+![Hình Ảnh]() 
 
 ---
 
-![HinhAnh]() 
+![Hình Ảnh]() 
 
 ---
 
-![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811553.png?alt=media&token=75680ec1-89aa-4171-8681-a5ff1f38a4f4) 
+![Hình Ảnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811553.png?alt=media&token=75680ec1-89aa-4171-8681-a5ff1f38a4f4) 
 
 ---
 
-![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592812457.png?alt=media&token=d8be7477-09e6-4fe3-b0ec-71d4d8a049d3) 
+![Hình Ảnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592812457.png?alt=media&token=d8be7477-09e6-4fe3-b0ec-71d4d8a049d3) 
 
 ---
-## CongNghe
+## Công Nghệ
 
 ```
 
