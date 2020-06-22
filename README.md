@@ -1,57 +1,70 @@
-<a href="http://facebook.com/ivermin1123"><img src="https://i.ibb.co/DfTRsjx/ace49df8-1cfc-4b91-a034-f35dd2e117b9-200x200.png" title="ivermin1123" alt="ivermin1123"></a>
+<img src="https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/EATEN_logo_tran.png?alt=media&token=ff04101c-0e6a-43b5-aed9-f65790cfc6a3" title="ivermin1123" alt="Eaten"></a>
 
 
-# Restaurant Management System
+# Eaten - Ứng Dụng Kết Nối Những Tâm Hồn Ăn Uống 
 
-> This project is based on tutorial series by <a href="https://www.howkteam.vn/course/lap-trinh-phan-mem-quan-ly-quan-cafe-voi-c-winform-24/" target="_blank">**HowKteam**</a> 
+> Eaten là ứng dụng được xây dựng trên nền tảng Android.
+> Chia sẻ nhận xét, bình phẩm các món ăn, địa điểm ăn uống siêu hot từ khắp mọi nơi trên thế giới.
 
-> Take it if you like and remember give me a star. Thank you.
+**Về chúng tôi - Eaten Group**
+> <a href="http://facebook.com/nguyentu.299" target="_blank">**Nguyễn Thanh Tú**</a>.
+> <a href="http://facebook.com/trhgyen" target="_blank">**Trịnh Hoàng Yến**</a>.
+> <a href="http://facebook.com/hoangminh.luu.716" target="_blank">**Nguyễn Hoàng Huy**</a>.
+> <a href="http://facebook.com/hoanghuy2015" target="_blank">**Lưu Hoàng Minh**</a>.
 
-> About me: <a href="http://facebook.com/ivermin1123" target="_blank">**Quoc Hoang**</a>.
-<p>Nguyễn Thanh Tú </p>
-        <p>Trịnh Hoàng Yến </p>
-        <p>Nguyễn Hoàng Huy </p>
-        <p>Lưu Hoàng Minh </p>
-
-**Something ...**
-
-- Build status: 80%
+- Build status: 90%
 
 ![Build Status](https://img.shields.io/badge/Build%3A-testing-green)
 
 ---
 
-## Project Structure
-- [Img](#img)
-- [Requirements](#requirements)
+## Mô Tả Hệ Thống
+- [HinhAnh](#Hình Ảnh)
+- [CongNghe](#Công Nghệ)
 
 ---
 
-## Img
+## HinhAnh
 
-![Img](https://i.ibb.co/w0HBTZ8/order.jpg)
-
----
-
-![Img](https://i.ibb.co/C6RhjSJ/2.jpg) 
+![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811489.png?alt=media&token=06991a01-5f90-4228-a611-84d0a4912c31)
 
 ---
 
-![Img](https://i.ibb.co/P6W3Nb4/admin.jpg) 
+![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592812513.png?alt=media&token=361da5e2-b0f0-4127-9729-c92b02401aaa) 
 
 ---
 
-## Requirements
+![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811543.png?alt=media&token=a563398f-eeea-48e9-9655-f6b34d48901d) 
+
+---
+
+![HinhAnh]() 
+
+---
+
+![HinhAnh]() 
+
+---
+
+![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811553.png?alt=media&token=75680ec1-89aa-4171-8681-a5ff1f38a4f4) 
+
+---
+
+![HinhAnh](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592812457.png?alt=media&token=d8be7477-09e6-4fe3-b0ec-71d4d8a049d3) 
+
+---
+## CongNghe
 
 ```
 
- 1:- VS 2019
- 2:- .Net Framework 4.7.2
- 3:- SQL
- 4:- Bunifu Framework - 1.5.3
- 5:- Microsoft.ReportingServices.ReportViewerControl.Winforms v150.1400.0
- 6:- Microsoft.SqlServer.Types v14.0.1016.290
- 7:- Report Viewer
+**Backend**
+ 1: Microsoft SqlServer
+ 2: API - MVC ASP .NET Core
+ 3: Microsoft Azure
+ 4: Firebase
+ 
+ **Frontend**
+ 1: Android Studio
  
 ```
 
