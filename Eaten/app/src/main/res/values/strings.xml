@@ -36,10 +36,28 @@
     <string name="text_signuptrue">Đăng Ký thành công!</string>
     <string name="text_signupfalse">Đăng ký thất bại!</string>
 
+
     //Huy
     <string name="title_home">Trang chủ</string>
     <string name="title_videos">Video</string>
     <string name="title_notifications">Thông báo</string>
     <string name="title_profile">Tài khoản</string>
     <string name="title_post"></string>
+
+    //acc_info
+    <string name="text_info">THÔNG TIN</string>
+    <string name="text_status_acc">Bài viết</string>
+    <string name="text_followers">Người theo dõi</string>
+    <string name="text_following">Đang theo dõi</string>
+
+    //welcome
+    <string name="text_next">Tiếp</string>
+    <string name="text_skip">Bỏ qua</string>
+    <string name="text_start">Bắt đầu</string>
+
+    // noti
+    <string name="text_noti">Bạn chưa có thông báo nào</string>
+
+    //home -> search
+    <string name="text_search">Ăn gì? Ở đâu?</string>
 </resources>

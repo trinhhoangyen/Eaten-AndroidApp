@@ -6,7 +6,7 @@
         </trust-anchors>
     </base-config>
     <domain-config cleartextTrafficPermitted="true">
-        <domain includeSubdomains="true">eatenapi.azurewebsites.net:1433/</domain>
+        <domain includeSubdomains="true">thym.azurewebsites.net:1433/</domain>
     </domain-config>
 </network-security-config>
 

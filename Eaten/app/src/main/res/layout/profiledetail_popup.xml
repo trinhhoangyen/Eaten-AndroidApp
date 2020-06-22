@@ -6,7 +6,6 @@
     android:background="@drawable/background_popup"
     android:layout_gravity="center"
     android:orientation="vertical"
-    android:alpha="0.8"
     >
     <TextView
         android:id="@+id/txtclose"

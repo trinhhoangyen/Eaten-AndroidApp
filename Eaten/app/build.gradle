@@ -41,7 +41,9 @@ dependencies {
     //navigation brand Huy
     implementation 'androidx.navigation:navigation-fragment:2.2.2'
     implementation 'androidx.navigation:navigation-ui:2.2.2'
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0" // load lại trang
     // Download module Core chứa trình phát youtube
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:10.0.5'
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:chromecast-sender:0.23'
+    implementation 'com.google.android.material:material:1.0.0'
 }

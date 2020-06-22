@@ -20,6 +20,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.eaten.DTO.Account;
+import com.example.eaten.DTO.Shared;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,9 +40,19 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
 
+
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //
+        //check đã đăng nhập trước đó chưa
+        Shared shared = new Shared(getApplicationContext());
+        if(shared.firsttime()){
+            Intent intent = new Intent(MainActivity.this, SlideShowActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
         edtEmail = (EditText) findViewById(R.id.edtEmail);
         edtPassword = (EditText) findViewById(R.id.edtPassword);
         btnLogin = (Button) findViewById(R.id.btnLogin);
@@ -76,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void Submit(String data) {
         final String savedata = data;
-        String URL = "https://eatenapi.azurewebsites.net/api/Accounts/get-account-login/";
+        String URL = "https://thym.azurewebsites.net/api/Accounts/get-account-login/";
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
@@ -102,9 +113,15 @@ public class MainActivity extends AppCompatActivity {
                         //Hoàn thành
                         editor.commit();
 
-                        Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
+                        //Intent intentHome = new Intent(MainActivity.this, HomeActivity.class);
+                        Intent intentHome = new Intent(MainActivity.this, SlideShowActivity.class);
                         intentHome.putExtra("accID", account.getAccountId()); //chuyển accountId sang HomeActivity
                         startActivity(intentHome);
+                        //kết thúc activity, ko back được về trang này nếu ko logout
+                        finish();
+                        //lần vào ứng dụng sau ko cần đăng nhập lại
+                        Shared shared = new Shared(getApplicationContext());
+                        shared.secondtime();
                     }
                     else
                         Toast.makeText(getApplicationContext(), R.string.text_signinfalse, Toast.LENGTH_LONG).show();

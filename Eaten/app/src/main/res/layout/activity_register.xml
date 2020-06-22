@@ -8,7 +8,7 @@
 
     <ImageView
         android:id="@+id/iv_auth_bg"
-        android:layout_width="429dp"
+        android:layout_width="match_parent"
         android:layout_height="207dp"
         android:scaleType="centerCrop"
         android:src="@drawable/wave_register"

@@ -6,25 +6,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ScrollView
-        android:id="@+id/scrollpost"
+    <!--    <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView-->
+    <!--            android:id="@+id/youtube_player_view_1"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            app:autoPlay="false"-->
+    <!--            app:showFullScreenButton="false"-->
+    <!--            app:videoId="ftsQYS1fkOs"/>-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/nav_view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:layout_constraintVertical_weight="2">
-
-        <com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView
-            android:id="@+id/youtube_player_view_1"
+        android:layout_height="match_parent"
+        android:id="@+id/refreshVideos">
+        <WebView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:autoPlay="false"
-            app:showFullScreenButton="false"
-            app:videoId="ftsQYS1fkOs"></com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView>
-
-    </ScrollView>
+            android:layout_height="match_parent"
+            android:id="@+id/wv"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"

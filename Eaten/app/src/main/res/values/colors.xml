@@ -7,5 +7,5 @@
     <color name="colorDivider">#EBEBEB</color>
     <color name="colorSecondaryText">#757575</color>
     <color name="colorRed">#FFD11313</color>
-
+    <color name="colorBorderSearch">#ffb300</color>
 </resources>
