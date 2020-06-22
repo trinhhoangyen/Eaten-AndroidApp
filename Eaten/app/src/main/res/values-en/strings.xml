@@ -40,4 +40,22 @@
     <string name="title_post"></string>
     <string name="text_hint_display_name">Display Name</string>
     <string name="text_hint_year_of_birth">Year Of Birth</string>
+
+    //acc_info
+    <string name="text_info">INFORMATION</string>
+    <string name="text_status_acc">Posts</string>
+    <string name="text_followers">Followers</string>
+    <string name="text_following">Following</string>
+
+    //welcome
+    <string name="text_next">Next</string>
+    <string name="text_skip">Skip</string>
+    <string name="text_start">Start</string>
+
+    <string name="text_noti">No notifications</string>
+
+    <string name="text_search">Eat what? Where?</string>
+
+
+
 </resources>

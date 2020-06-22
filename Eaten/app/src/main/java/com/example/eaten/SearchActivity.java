@@ -41,7 +41,7 @@ public class SearchActivity extends AppCompatActivity {
     EditText txtSearch;
     GridView gv;
     List<Card> cardList, listSearch;
-    private static final String JSON_URL = "https://eatenapi.azurewebsites.net/api/Posts/get-all-post-info";
+    private static final String JSON_URL = "https://thym.azurewebsites.net/api/Posts/get-all-post-info";
 
 
     @Override

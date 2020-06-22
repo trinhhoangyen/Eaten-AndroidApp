@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -29,6 +30,7 @@ import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import com.android.volley.Request;
@@ -39,6 +41,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.example.eaten.DTO.Card;
+import com.example.eaten.DTO.Shared;
 import com.example.eaten.myadapter.CardAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -63,7 +66,7 @@ import static android.view.View.VISIBLE;
 public class HomeActivity extends AppCompatActivity {
     GridView gv;
     List<Card> cardList;
-    private static final String JSON_URL = "https://eatenapi.azurewebsites.net/api/Posts/get-all-post-info";
+    private static final String JSON_URL = "https://thym.azurewebsites.net/api/Posts/get-all-post-info";
     Spinner spinnerRegion;
 
     GridView grd;
@@ -77,7 +80,25 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        //Reload
+        final SwipeRefreshLayout refreshLayout;
+        refreshLayout = findViewById(R.id.refeshGrid);
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                gv.setAdapter(null);
+                loadGV();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        refreshLayout.setRefreshing(false);
+                    }
+                },3*1000);
+            }
+        });
+
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.nav_view);
+
         Menu menu = bottomNavigationView.getMenu();
         MenuItem menuItem0 = menu.getItem(0 );
         menuItem0.setChecked(true);
@@ -194,7 +215,7 @@ public class HomeActivity extends AppCompatActivity {
 
         cardList = new ArrayList<>();
         final ProgressBar progressBar = (ProgressBar) findViewById(R.id.progressBar);
-        progressBar.setVisibility(View.VISIBLE);
+        progressBar.setVisibility(View.INVISIBLE);
         StringRequest stringRequest = new StringRequest(Request.Method.POST, JSON_URL,
                 new Response.Listener<String>() {
                     @Override
