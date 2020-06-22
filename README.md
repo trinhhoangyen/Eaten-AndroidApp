@@ -50,7 +50,7 @@ Frontend
 
 ---
 
-![Image](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592812513.png?alt=media&token=361da5e2-b0f0-4127-9729-c92b02401aaa) 
+![Image](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/picturemessage_i2xujors.g3s.png?alt=media&token=f0348f43-ce36-4d92-bc91-d8344ab4ef65) 
 
 ---
 
@@ -66,7 +66,7 @@ Frontend
 
 ---
 
-![Image](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592811553.png?alt=media&token=75680ec1-89aa-4171-8681-a5ff1f38a4f4) 
+![Image](https://firebasestorage.googleapis.com/v0/b/eaten-9a975.appspot.com/o/Screenshot_1592812513.png?alt=media&token=361da5e2-b0f0-4127-9729-c92b02401aaa) 
 
 ---
 
