@@ -89,11 +89,13 @@ public class PostActivity extends AppCompatActivity {
                         Intent in1 = new Intent(PostActivity.this, HomeActivity.class);
                         startActivity(in1);
                         Animatoo.animateSlideRight(PostActivity.this);
+                        finish();
                         break;
                     case R.id.navigation_videos:
                         Intent in2 = new Intent(PostActivity.this, VideosActivity.class);
                         startActivity(in2);
                         Animatoo.animateSlideRight(PostActivity.this);
+                        finish();
                         break;
                     case R.id.navigation_post:
                         break;
@@ -101,11 +103,13 @@ public class PostActivity extends AppCompatActivity {
                         Intent in3 = new Intent(PostActivity.this, NotificationsActivity.class);
                         startActivity(in3);
                         Animatoo.animateSlideLeft(PostActivity.this);
+                        finish();
                         break;
                     case R.id.navigation_profile:
                         Intent in4 = new Intent(PostActivity.this, AccInfoActivity.class);
                         startActivity(in4);
                         Animatoo.animateSlideLeft(PostActivity.this);
+                        finish();
                         break;
                 }
                 return true;
@@ -246,7 +250,7 @@ public class PostActivity extends AppCompatActivity {
     }
 
     private void Submit(String data) {
-        String URL = "https://eatenapi.azurewebsites.net/api/Posts/add-post/";
+        String URL = "https://thym.azurewebsites.net/api/Posts/add-post/";
 
         final String savedata = data;
 

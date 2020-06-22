@@ -2,11 +2,13 @@ package com.example.eaten;
 
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -50,8 +52,8 @@ public class HomeSubActivity extends AppCompatActivity {
     List<HomeSubCmt> homeSubCmtList;
 
     int temp, accID;
-    private static final String JSON_URL = "https://eatenapi.azurewebsites.net/api/Posts/get-all-post-info";
-    private static final String JSON_URLCMT = "https://eatenapi.azurewebsites.net/api/Comments/get-all-comment-info";
+    private static final String JSON_URL = "https://thym.azurewebsites.net/api/Posts/get-all-post-info";
+    private static final String JSON_URLCMT = "https://thym.azurewebsites.net/api/Comments/get-all-comment-info";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,6 +62,21 @@ public class HomeSubActivity extends AppCompatActivity {
         //Hide ActionBar
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+        //Reload
+        final SwipeRefreshLayout refreshLayout;
+        refreshLayout = findViewById(R.id.refreshPostSub);
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadCmt();
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        refreshLayout.setRefreshing(false);
+                    }
+                },1*1000);
+            }
+        });
 
         mapping();
 
@@ -213,7 +230,7 @@ public class HomeSubActivity extends AppCompatActivity {
 
     //Load avatar và tên của account đang đăng nhập
     private void loadacc(){
-        final String JSON_ACC = "https://eatenapi.azurewebsites.net/api/Accounts/get-all";
+        final String JSON_ACC = "https://thym.azurewebsites.net/api/Accounts/get-all";
         StringRequest stringRequest = new StringRequest(Request.Method.POST, JSON_ACC,
                 new Response.Listener<String>() {
                     @Override
@@ -296,7 +313,7 @@ public class HomeSubActivity extends AppCompatActivity {
     };
     private void Submit(String data) {
         final String savedata = data;
-        String URL = "https://eatenapi.azurewebsites.net/api/Comments/create-comment";
+        String URL = "https://thym.azurewebsites.net/api/Comments/create-comment";
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue = Volley.newRequestQueue(getApplicationContext());

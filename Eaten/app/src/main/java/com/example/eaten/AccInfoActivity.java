@@ -1,15 +1,21 @@
 package com.example.eaten;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.webkit.MimeTypeMap;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -19,8 +25,10 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
@@ -32,8 +40,15 @@ import com.android.volley.toolbox.Volley;
 import com.blogspot.atifsoftwares.animatoolib.Animatoo;
 import com.example.eaten.DTO.Account;
 import com.example.eaten.DTO.Card;
+import com.example.eaten.DTO.Shared;
 import com.example.eaten.myadapter.CardAdapter;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -51,9 +66,15 @@ public class AccInfoActivity extends AppCompatActivity {
     TextView displayname_info, email_info, gender_info, year_info, quantity;
     int temp;
     Dialog myDialog;
+    //Các biến phục vụ cho Firebase
+    private StorageReference mStorageRef;
+    private FirebaseStorage storage;
+    private Uri imageUri;
+    //Đường dẫn ảnh upload
+    private String imageURL;
 
-    private static final String JSON_URL = "https://eatenapi.azurewebsites.net/api/Posts/get-all-post-info";
-    private static final String JSON_URLACC = "https://eatenapi.azurewebsites.net/api/Accounts/get-all";
+    private static final String JSON_URL = "https://thym.azurewebsites.net/api/Posts/get-all-post-info";
+    private static final String JSON_URLACC = "https://thym.azurewebsites.net/api/Accounts/get-all";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,6 +84,25 @@ public class AccInfoActivity extends AppCompatActivity {
         //Hide ActionBar
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+
+//        //Reload
+        final SwipeRefreshLayout refreshLayout;
+        refreshLayout = findViewById(R.id.refreshInfo);
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                loadacc();
+                loadlv();
+                loadPostQuantity();
+
+                new Handler().postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        refreshLayout.setRefreshing(false);
+                    }
+                },1*1000);
+            }
+        });
 
         //Khai báo BottomNavigation
         BottomNavigationView bottomNavigationView = (BottomNavigationView) findViewById(R.id.nav_view);
@@ -80,21 +120,25 @@ public class AccInfoActivity extends AppCompatActivity {
                         Intent in1 = new Intent(AccInfoActivity.this, HomeActivity.class);
                         startActivity(in1);
                         Animatoo.animateSlideRight(AccInfoActivity.this);
+                        finish();
                         break;
                     case R.id.navigation_videos:
                         Intent in2 = new Intent(AccInfoActivity.this, VideosActivity.class);
                         startActivity(in2);
                         Animatoo.animateSlideRight(AccInfoActivity.this);
+                        finish();
                         break;
                     case R.id.navigation_post:
                         Intent in3 = new Intent(AccInfoActivity.this, PostActivity.class);
                         startActivity(in3);
                         Animatoo.animateSlideUp(AccInfoActivity.this);
+                        finish();
                         break;
                     case R.id.navigation_notifications:
                         Intent in4 = new Intent(AccInfoActivity.this, NotificationsActivity.class);
                         startActivity(in4);
                         Animatoo.animateSlideRight(AccInfoActivity.this);
+                        finish();
                         break;
                     case R.id.navigation_profile:
                         break;
@@ -123,6 +167,10 @@ public class AccInfoActivity extends AppCompatActivity {
                 startActivity(sub);
             }
         });
+
+        //Sử dụng Firebase
+        mStorageRef = FirebaseStorage.getInstance().getReference();
+        storage = FirebaseStorage.getInstance(mStorageRef.toString());
     }
     private void loadacc(){
         StringRequest stringRequest = new StringRequest(Request.Method.POST, JSON_URLACC,
@@ -256,10 +304,14 @@ public class AccInfoActivity extends AppCompatActivity {
         btnLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //set lại giá trị trong shared
+                Shared shared = new Shared(getApplicationContext());
+                shared.logouttime();
                 Intent intent = new Intent(AccInfoActivity.this, MainActivity.class);
                 finish();
                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
+
             }
         });
         txtclose = (TextView) myDialog.findViewById(R.id.txtclose);
@@ -268,6 +320,14 @@ public class AccInfoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 myDialog.dismiss();
+            }
+        });
+        acc_info.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fragment_fade_enter);
+                acc_info.startAnimation(animation);
+                openImage();
             }
         });
         myDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
@@ -285,7 +345,7 @@ public class AccInfoActivity extends AppCompatActivity {
 
     private void Submit(String data) {
         final String savedata = data;
-        String URL = "https://eatenapi.azurewebsites.net/api/Accounts/get-post-quantity";
+        String URL = "https://thym.azurewebsites.net/api/Accounts/get-post-quantity";
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue = Volley.newRequestQueue(getApplicationContext());
@@ -315,5 +375,96 @@ public class AccInfoActivity extends AppCompatActivity {
             }
         };
         requestQueue.add(stringRequest);
+    }
+
+    //Mở file ảnh upload
+    private void openImage(){
+        Intent intent = new Intent();
+        intent.setType("image/");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityForResult(intent, 2);
+    }
+
+    private void UpdateAccount(String data) {
+        final String savedata = data;
+        String URL = "https://thym.azurewebsites.net/api/Accounts/update-account";
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue = Volley.newRequestQueue(getApplicationContext());
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, URL, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                Intent refresh = new Intent(AccInfoActivity.this, AccInfoActivity.class);
+                startActivity(refresh);
+                finish();
+                Toast.makeText(getApplicationContext(), "Cập nhật ảnh đại diện thành công!", Toast.LENGTH_SHORT).show();
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+            }
+        }) {
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+
+            @Override
+            public byte[] getBody() throws AuthFailureError {
+                try {
+                    return savedata == null ? null : savedata.getBytes("utf-8");
+                } catch (UnsupportedEncodingException uee) {
+                    //Log.v("Unsupported Encoding while trying to get the bytes", data);
+                    return null;
+                }
+            }
+        };
+        requestQueue.add(stringRequest);
+    }
+
+    //Upload ảnh
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == 2 && resultCode == -1){
+            imageUri = data.getData();
+            uploadImage();
+        }
+    }
+
+    private void uploadImage() {
+        final ProgressDialog pd = new ProgressDialog(this);
+        pd.setMessage("Đang tải ảnh lên...");
+        pd.show();
+
+        if (imageUri != null) {
+            final StorageReference fileRef = FirebaseStorage.getInstance().getReference().child(System.currentTimeMillis() + "." + getFileExtension(imageUri));
+            fileRef.putFile(imageUri).addOnCompleteListener(new OnCompleteListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<UploadTask.TaskSnapshot> task) {
+                    fileRef.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                        @Override
+                        public void onSuccess(Uri uri) {
+                            String url = uri.toString();
+                            Log.d("Image URL", url);
+                            pd.dismiss();
+                            imageURL = url;
+                            String data = String.format("{\n" +
+                                    "  \"accountId\": %d,\n" +
+                                    "  \"avatarURL\": \"%s\"\n" +
+                                    "}", temp, imageURL);
+                            UpdateAccount(data);
+                        }
+                    });
+                }
+            });
+        } else {
+            Toast.makeText(this, R.string.text_loadimgfalse, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private String getFileExtension(Uri uri) {
+        return MimeTypeMap.getSingleton().getExtensionFromMimeType(this.getContentResolver().getType(uri));
     }
 }
