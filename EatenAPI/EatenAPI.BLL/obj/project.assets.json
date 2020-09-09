@@ -4992,19 +4992,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\thien\\.nuget\\packages\\": {}
+    "C:\\Users\\Thanh Tu Nguyen\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MyStudy\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\EatenAPI.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\Thanh Tu Nguyen\\Desktop\\Eaten-AndroidApp\\EatenAPI\\EatenAPI.BLL\\EatenAPI.BLL.csproj",
       "projectName": "EatenAPI.BLL",
-      "projectPath": "C:\\MyStudy\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\EatenAPI.BLL.csproj",
-      "packagesPath": "C:\\Users\\thien\\.nuget\\packages\\",
-      "outputPath": "C:\\MyStudy\\Eaten-Android\\EatenAPI\\EatenAPI.BLL\\obj\\",
+      "projectPath": "C:\\Users\\Thanh Tu Nguyen\\Desktop\\Eaten-AndroidApp\\EatenAPI\\EatenAPI.BLL\\EatenAPI.BLL.csproj",
+      "packagesPath": "C:\\Users\\Thanh Tu Nguyen\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Thanh Tu Nguyen\\Desktop\\Eaten-AndroidApp\\EatenAPI\\EatenAPI.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\thien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Thanh Tu Nguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5017,11 +5017,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\MyStudy\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj": {
-              "projectPath": "C:\\MyStudy\\Eaten-Android\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj"
+            "C:\\Users\\Thanh Tu Nguyen\\Desktop\\Eaten-AndroidApp\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj": {
+              "projectPath": "C:\\Users\\Thanh Tu Nguyen\\Desktop\\Eaten-AndroidApp\\EatenAPI\\EatenAPI.Common\\EatenAPI.Common.csproj"
             },
-            "C:\\MyStudy\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj": {
-              "projectPath": "C:\\MyStudy\\Eaten-Android\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj"
+            "C:\\Users\\Thanh Tu Nguyen\\Desktop\\Eaten-AndroidApp\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj": {
+              "projectPath": "C:\\Users\\Thanh Tu Nguyen\\Desktop\\Eaten-AndroidApp\\EatenAPI\\EatenAPI.DAL\\EatenAPI.DAL.csproj"
             }
           }
         }
@@ -5065,7 +5065,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
